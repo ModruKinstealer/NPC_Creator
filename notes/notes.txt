@@ -1,0 +1,44 @@
+python json library
+    import json
+    https://www.w3schools.com/python/python_json.asp
+
+    Use that instead of SQL since Foundry uses Json already?
+
+sql tables
+    spells
+        ID (primary)
+        name
+        classes
+            column for each class/subclass with a lvl or dictionary with each class as a key and lvl the value?
+        lvl
+            May not be needed if combo lvl in with class(es) above
+        image
+            URL to where it's at, or convert to webp and store in db?
+        casting time
+        duration
+        range
+        area
+        shape
+        attack
+        save
+        dmg effect
+        school
+        source
+            list if in more than one source, or a separate column for each source, SRD + books + homebrew, which would be easier to build sorting around this field?
+        components
+        material component
+        ritual
+        concentration
+    feats
+        name, source, list of effects, prerequisite
+        maybe a column for +/- to CR?
+        tags: dndbeyond has them, do other sources list tags?
+    features
+    monsters
+    races
+    equipment
+    backgrounds
+    skills
+    languages
+    separate tables for homebrewed vs SRD/raw?
+
