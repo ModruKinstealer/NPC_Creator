@@ -1,0 +1,5 @@
+Flask
+Flask-session
+datetime
+requests
+sqlite3

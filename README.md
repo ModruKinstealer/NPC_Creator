@@ -25,7 +25,8 @@ As a new DM I found that often pre-made monsters or NPCs in my D&amp;D 5e game w
 - The ability for a DM to determine which abilities the creature uses for calculation of CR, for those instances when they know that they want to use a different set of abilities than what is defaulted to for an encounter so they can tailor the CR more effectively to a particular encounter should they choose. 
 
 # Files and their purposes
-
+-app.py, requirements.txt, helpers.py
+    - The site I want to create has some similarities to pset9: Finance so I'm going to use that as a kind of template for the final project as such I'm going to use app.py for the main program and put all my helper functions in helpers.py. Ideally things should be setup as modular as possible.
 
 
 
