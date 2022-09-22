@@ -24,6 +24,8 @@ As a new DM I found that often pre-made monsters or NPCs in my D&amp;D 5e game w
 - The ability for each user to set what they want for default stats, or stat generation, for new creatures. 
 - The ability for a DM to determine which abilities the creature uses for calculation of CR, for those instances when they know that they want to use a different set of abilities than what is defaulted to for an encounter so they can tailor the CR more effectively to a particular encounter should they choose. 
 
+# Files and their purposes
+
 
 
 
