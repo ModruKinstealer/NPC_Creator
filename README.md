@@ -27,6 +27,10 @@ As a new DM I found that often pre-made monsters or NPCs in my D&amp;D 5e game w
 # Files and their purposes
 -app.py, requirements.txt, helpers.py
     - The site I want to create has some similarities to pset9: Finance so I'm going to use that as a kind of template for the final project as such I'm going to use app.py for the main program and put all my helper functions in helpers.py. Ideally things should be setup as modular as possible.
+-npc.db
+    - Main database for the site. Will have tables for users, spells, features, monsters, races, equipment, backgrounds, skills, and languages at a minimum.
+    - I may create additional tables that are for home brewed content for each of those as well, it'll depend on what I think would be easier to maintain and use going forward
+    - I considered using Json files rather than a DB but I'd guess there's at least a thousand spells, and a couple thousand monsters, plus everything else I thought that a SQL db would be the better long term choice since there's no telling how many users will use it and therefor how many thousands of new entries will get created going forward
 
 
 
