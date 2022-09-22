@@ -63,9 +63,19 @@
         <main class="container-fluid py-5 text-center">
             {% block main %}{% endblock %}
         </main>
-
-        <footer class="mb-5 small text-center text-muted">
-            Data provided by <a href="https://iexcloud.io/">IEX</a>
+        <button type="button" class="btn btn-outline-primary btn-rounded btn-floating btn-lg" id="btn-back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <footer class="mb-5 small text-center text-muted fixed-bottom">
+            <div>
+                <hr>
+            </div>
+                <ul>
+                    <li>
+                        <a href="mailto:modrukinstealer@hotmail.com"><i class="fa-solid fa-envelope"></i> modrukinstealer@hotmail.com</a>
+                    </li>
+                    <li id="copyright"> &copy; Raymond Frost 2022</li>
+                </ul>
         </footer>
 
     </body>
