@@ -1,0 +1,121 @@
+sql tables
+    users
+        id (primary)
+        name text not null
+        hash text not null
+        email text not null
+        access number not null default 0
+            0:guest
+            1:user
+            2:trusted_user
+            3:admin
+            4:Everything
+    sources
+        id (primary)
+        user_id not null
+            this way when someone creates a new thing they can be added as a source and they
+            decide if public or private, maybe give permission to specific users if they want to
+            share with friends?
+                Lookup by name or email?
+                for srd/raw stuff use my user ID or admin id something like that
+            foreign key(user_id) references users(id)
+        abr text not null
+            hbrew for homebrewed stuff?
+        name text not null
+            full name of book, or for homebrewed stuff user name
+                maybe have a field they can fill in if they want to associate stuff with a world or campaign
+        publisher text
+            publisher company name or user name for homebrewed stuff
+        minAccess number not null
+            default access lvl
+
+
+    spells
+        id (primary)
+        name text not null
+        classes text not null 
+            I think in spells just have lvl, then have another table that is a list of classes with the spell's id number for each spell on their list
+            that way when you add a class you a can determine which spells go with it. Also that feels like it'd be easier to manage especially when homebrewed classes
+            and spells start coming into play.       
+        lvl number not null
+            May not be needed if combo lvl in with class(es) above
+        image
+            URL to where it's at, or convert to webp and store in db?
+        casting time
+        duration
+        range
+        area
+        shape
+        attack
+        save
+        dmg effect
+        school text not null
+        source text not null
+            sources(name)
+            maybe foreign key references sources(id)?
+        components text
+        material_component text
+        ritual number
+            0 no, 1 yes
+        concentration number
+            0 no, 1 yes
+        
+    feats
+        id number primary
+        name text
+        source text not null
+            sources(name)
+            maybe foreign key references sources(id)?
+        list of effects text
+        prerequisite text
+        crAdj number
+        tags text 
+            dndbeyond has them, do other sources list tags?
+    features
+    monsters
+    races
+        id number primary
+        name text not null
+        ability_scores text
+        ** Partially completed**
+
+    equipment
+    backgrounds
+        id primary
+        description text not null
+        prof text not null
+            maybe list of id's from skills table
+        languages text
+            maybe list of id's from languages table
+        features text not null
+        characteristics text not null
+        src text
+            maybe foreign key references sources(id)?
+        traits text
+            list of ids from traits table
+        ideals text
+            list of ids from traits table
+        bonds
+            list of ids from traits table
+        flaws
+            list of ids from traits table
+    traits
+        id primary
+        description text not null
+        traits checkbox
+        bonds checkbox
+        ideals checkbox
+        bonds checkbox
+        flaws checkbox
+        src number
+            foreign key references sources(id)
+    skills
+    languages
+        id primary, number not null
+        name text not null
+        description text not null
+        src text not null
+            Either abbreviation of book or user's ID number if homebrewed
+        speakers text
+        script text
+    separate tables for homebrewed vs SRD/raw?
