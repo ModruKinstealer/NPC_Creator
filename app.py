@@ -19,6 +19,7 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
+
 @app.after_request
 def after_request(response):
     """Ensure responses aren't cached"""
@@ -55,6 +56,9 @@ def login():
             return apology("must provide password", 403)
 
         # Query database for username
+        con = sqlite3.connect('npc.db')
+        db = con.cursor()
+
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
         # Ensure username exists and password is correct
@@ -110,6 +114,8 @@ def password():
             return apology("New password and confirm passwords must match.")
 
         # Query database for username
+        con = sqlite3.connect('npc.db')
+        db = con.cursor()
         rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
 
         # Ensure username exists and password is correct
