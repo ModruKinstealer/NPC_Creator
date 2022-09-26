@@ -1,11 +1,12 @@
 import os
-import sqlite3
 
+from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
-from helpers import apology, login_required
+
+from helpers import apology, login_required, lookup, usd
 
 # Configure application
 app = Flask(__name__)
@@ -13,10 +14,20 @@ app = Flask(__name__)
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
+# Custom filter
+app.jinja_env.filters["usd"] = usd
+
 # Configure session to use filesystem (instead of signed cookies)
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
+
+# Configure CS50 Library to use SQLite database
+db = SQL("sqlite:///finance.db")
+
+# Make sure API key is set
+if not os.environ.get("API_KEY"):
+    raise RuntimeError("API_KEY not set")
 
 
 @app.after_request
@@ -28,11 +39,24 @@ def after_request(response):
     return response
 
 
-## Everything below this has been brought from Finance and needs to be updated
 @app.route("/")
 @login_required
 def index():
-    """main page with character sheet"""
+    """Show portfolio of stocks"""
+    return apology("TODO")
+
+
+@app.route("/buy", methods=["GET", "POST"])
+@login_required
+def buy():
+    """Buy shares of stock"""
+    return apology("TODO")
+
+
+@app.route("/history")
+@login_required
+def history():
+    """Show history of transactions"""
     return apology("TODO")
 
 
@@ -55,9 +79,6 @@ def login():
             return apology("must provide password", 403)
 
         # Query database for username
-        con = sqlite3.connect('npc.db')
-        db = con.cursor()
-
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
         # Ensure username exists and password is correct
@@ -86,14 +107,25 @@ def logout():
     return redirect("/")
 
 
+@app.route("/quote", methods=["GET", "POST"])
+@login_required
+def quote():
+    """Get stock quote."""
+    if request.method == "POST":
+        # Lookup successful (symbol is valid)
+        # Lookup un-successful (symbol is invalid)
+
+        return render_template("quoted.html")
+    else:
+        return render_template("quote.html")
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
     if request.method == "POST":
         # Validate inputs
         # Name, not empty and unique
-        con = sqlite3.connect('npc.db')
-        db = con.cursor()
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
         if not request.form.get("username") or not request.form.get("password") or not request.form.get("confirmation"):
             return apology("Name, password, and confirm password fields are required. Please try again.")
@@ -114,43 +146,9 @@ def register():
     else:
         return render_template("register.html")
 
-@app.route("/password", methods=["GET", "POST"])
+
+@app.route("/sell", methods=["GET", "POST"])
 @login_required
-def password():
-    # User reached route via POST (as by submitting a form via POST)
-    if request.method == "POST":
-
-        # Ensure username was submitted
-        if not request.form.get("oldPassword"):
-            return apology("Must provide all current password, new password, and confirm new password", 403)
-
-        # Ensure password was submitted
-        elif not request.form.get("newPassword"):
-            return apology("Must provide all current password, new password, and confirm new password", 403)
-
-        elif not request.form.get("confirmation"):
-            return apology("Must provide all current password, new password, and confirm new password", 403)
-
-        # Ensure new password and confirm password match
-        elif request.form.get("newPassword") != request.form.get("confirmation"):
-            return apology("New password and confirm passwords must match.")
-
-        # Query database for username
-        con = sqlite3.connect('npc.db')
-        db = con.cursor()
-        rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
-
-        # Ensure username exists and password is correct
-        if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("oldPassword")):
-            return apology("invalid password", 403)
-
-        # Update DB with new password
-        hash = generate_password_hash(request.form.get("newPassword"), method='sha256', salt_length=16)
-        # Insert inputs into users db
-        db.execute("UPDATE users SET hash=? WHERE id IS ?", hash, session["user_id"])
-        # Redirect user to home page
-        return redirect("/")
-
-    # User reached route via GET (as by clicking a link or via redirect)
-    else:
-        return render_template("password.html")
+def sell():
+    """Sell shares of stock"""
+    return apology("TODO")
