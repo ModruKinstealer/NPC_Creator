@@ -171,6 +171,6 @@ def index():
 
 
 @app.route("/resetpw")
-def index():
+def resetpw():
     """main page with character sheet"""
     return apology("TODO")
