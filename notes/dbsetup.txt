@@ -10,6 +10,8 @@ sql tables
             2:trusted_user
             3:admin
             4:Everything
+        challenges text not null
+            dictionary with the challenges as keys and the answers as values
     sources
         id (primary)
         user_id not null
@@ -68,18 +70,24 @@ sql tables
             maybe foreign key references sources(id)?
         list of effects text
         prerequisite text
-        crAdj number
+        crAdj number default 0
         tags text 
             dndbeyond has them, do other sources list tags?
-    features
-    monsters
+
     races
         id number primary
         name text not null
-        ability_scores text
-        ** Partially completed**
+        ability_scores text not null
+            dictionary with each stat and an adjustment value.
+        size text not null
+        src number not null
+            foreign key reference sources(id)
+        spd text not null
+            dictionary walk:0, fly:30 etc
+        traits text  not null
+            list of ids from traits table
+        crAdj number default 0
 
-    equipment
     backgrounds
         id primary
         description text not null
@@ -109,7 +117,7 @@ sql tables
         flaws checkbox
         src number
             foreign key references sources(id)
-    skills
+
     languages
         id primary, number not null
         name text not null
@@ -118,4 +126,97 @@ sql tables
             Either abbreviation of book or user's ID number if homebrewed
         speakers text
         script text
+    equipment
+        id primary, number not null
+        name text not null
+        type text not null
+            adventuring gear, mount, weapon, etc
+        description text not null
+        weight number not null
+        src
+            foreign key references sources(id)
+    skills
+        id primary
+        name text not null
+        attribute text not null 
+            str, dex, etc   
+        description text not null
+        src number not null
+            foreign key references sources(id)
+
+incomplete
+    weapons
+        id primary, number not null
+        name text not null
+        type text not null
+        description text not null
+        weight number not null
+        cost text 
+            dictionary gp:0,sp:0,cp:0
+        src
+            foreign key references sources(id)
+        dmgType text not null
+        dmg txt not null
+        versatile boolean
+        versatileDmg text
+        rangeShort number
+        rangeLong   number
+        reload boolean
+        heavy boolean
+        finesse boolean
+        2handed boolean
+        ammunition boolean
+        ** check foundry item for other properties to include **
+    armor
+        id primary, number not null
+        name text not null
+        weight number not null
+        cost text 
+            dictionary gp:0,sp:0,cp:0
+        weightClass text not null
+            heavy, light, medium
+        ac number not null
+        ** check foundry item for other properties to include **
+
+    features
+        id primary
+        name text not null
+        src number not null
+            foreign key references sources(id)
+        description text not null
+        crAdj number default 0
+        ** check foundry, 5e tools, and dndbeyond for what all they include
+
+    monsters
+        id primary
+        name text not null
+        type text not null
+        subtype text not null
+        str number not null
+        dex number not null
+        con number not null
+        int number not null
+        wis number not null
+        cha number not null
+        hitdie text not null
+        hp number not null
+        movement text not null 
+            dictionary, walk:0, fly:60 etc
+        dmgImmunities text 
+        conditionImmunities text not null
+        senses text not null
+            dictionary 
+        languages text
+            list with id's from languages table
+        cr number not null
+        profBonus number
+        description text
+        image text default 
+            link to image, srd should have images for most of them...
+        actions text
+            list of actions
+        
+        
+        
+    table for conditions?
     separate tables for homebrewed vs SRD/raw?
