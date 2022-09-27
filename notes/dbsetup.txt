@@ -144,7 +144,7 @@ sql tables
         src number not null
             foreign key references sources(id)
 
-incomplete
+
     weapons
         id primary, number not null
         name text not null
@@ -215,8 +215,14 @@ incomplete
             link to image, srd should have images for most of them...
         actions text
             list of actions
+        features text
+            list of ids from features table
+        src number not null
+            foreign key references sources(id)
         
-        
-        
-    table for conditions?
-    separate tables for homebrewed vs SRD/raw?
+    conditions
+        id primary 
+        name text not null
+        description not null
+        src number not null
+            foreign key references sources(id)  
