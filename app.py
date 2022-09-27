@@ -28,14 +28,6 @@ def after_request(response):
     return response
 
 
-## Everything below this has been brought from Finance and needs to be updated
-@app.route("/")
-@login_required
-def index():
-    """main page with character sheet"""
-    return apology("TODO")
-
-
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """Log user in"""
@@ -57,7 +49,6 @@ def login():
         # Query database for username
         con = sqlite3.connect('npc.db')
         db = con.cursor()
-
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
         # Ensure username exists and password is correct
@@ -73,7 +64,7 @@ def login():
     # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("login.html")
-
+        
 
 @app.route("/logout")
 def logout():
@@ -95,24 +86,36 @@ def register():
         con = sqlite3.connect('npc.db')
         db = con.cursor()
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+
         if not request.form.get("username") or not request.form.get("password") or not request.form.get("confirmation"):
             return apology("Name, password, and confirm password fields are required. Please try again.")
+
         if len(rows) > 0:
             return apology("Username already in use, please try again.")
+
+        # Password at least 8 characters long
+        if len(password) < 8:
+            return apology("Please choose a password with at least 8 characters.")
+
         # Password and confirm match
         if request.form.get("password") != request.form.get("confirmation"):
             return apology("Password and confirm password fields did not match.")
+
         # If pass validation
         # Hash password
         hash = generate_password_hash(request.form.get("password"),method='sha256',salt_length=16)
+
         # Insert inputs into users db
         db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", request.form.get("username"), hash)
+
         # Set the registered user as the logged in user and render /
         user = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
         session["user_id"] = user[0]["id"]
         return redirect("/")
+        
     else:
         return render_template("register.html")
+
 
 @app.route("/password", methods=["GET", "POST"])
 @login_required
@@ -120,7 +123,7 @@ def password():
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
 
-        # Ensure username was submitted
+        # Ensure original password was submitted
         if not request.form.get("oldPassword"):
             return apology("Must provide all current password, new password, and confirm new password", 403)
 
@@ -130,6 +133,10 @@ def password():
 
         elif not request.form.get("confirmation"):
             return apology("Must provide all current password, new password, and confirm new password", 403)
+
+        # Passwords should be 8 or more characters long
+        elif len(request.form.get("newPassword")) < 8:
+            return apology("Passwords must contain 8 or more characters.")
 
         # Ensure new password and confirm password match
         elif request.form.get("newPassword") != request.form.get("confirmation"):
@@ -154,3 +161,16 @@ def password():
     # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("password.html")
+
+## Everything below this needs to be completed
+@app.route("/")
+@login_required
+def index():
+    """main page with character sheet"""
+    return apology("TODO")
+
+
+@app.route("/resetpw")
+def index():
+    """main page with character sheet"""
+    return apology("TODO")
