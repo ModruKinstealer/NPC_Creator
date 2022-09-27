@@ -21,6 +21,7 @@ sql tables
                 Lookup by name or email?
                 for srd/raw stuff use my user ID or admin id something like that
             foreign key(user_id) references users(id)
+                got an error trying to update the table with a foreign key.. will have to try to figure out later or just not use foreign keys.
         abr text not null
             hbrew for homebrewed stuff?
         name text not null
