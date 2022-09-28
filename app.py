@@ -137,14 +137,7 @@ def password():
     if request.method == "POST":
 
         # Ensure original password was submitted
-        if not request.form.get("oldPassword"):
-            return apology("Must provide all current password, new password, and confirm new password", 403)
-
-        # Ensure password was submitted
-        elif not request.form.get("newPassword"):
-            return apology("Must provide all current password, new password, and confirm new password", 403)
-
-        elif not request.form.get("confirmation"):
+        if not request.form.get("oldPassword") or not request.form.get("newPassword") or not request.form.get("confirmation"):
             return apology("Must provide all current password, new password, and confirm new password", 403)
 
         # Passwords should be 8 or more characters long
@@ -156,9 +149,11 @@ def password():
             return apology("New password and confirm passwords must match.")
 
         # Ensure new password does not match old password
-        elif request.form.get("oldPassword") == request.form.get("confirmation"):
+        elif request.form.get("oldPassword") == request.form.get("newPassword"):
             return apology("New password can not be the same as old password.")
-
+        print(request.form.get("oldPassword"))
+        print(request.form.get("newPassword"))
+        
         # Query database for username
         rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
 
