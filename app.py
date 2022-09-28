@@ -186,7 +186,7 @@ def resetpw():
     """Page to reset password if forgotten"""
     return apology("TODO")
 
-@app.route("/import", methods=["GET", "POST"])
+@app.route("/importExport", methods=["GET", "POST"])
 @login_required
 def importExport():
     """Page to import or export characters"""
@@ -195,47 +195,47 @@ def importExport():
 @app.route("/spells", methods=["GET", "POST"])
 @login_required
 def spells():
-    """Page to import or export characters"""
+    """Page to Create, import, and or export spells"""
     return apology("TODO")
 
 @app.route("/monsters", methods=["GET", "POST"])
 @login_required
 def monsters():
-    """Page to import or export characters"""
+    """Page to Create, import, and or export monsters"""
     return apology("TODO")
 
 @app.route("/feats", methods=["GET", "POST"])
 @login_required
 def feats():
-    """Page to import or export characters"""
+    """Page to Create, import, and or export feats"""
     return apology("TODO")
 
 @app.route("/features", methods=["GET", "POST"])
 @login_required
 def features():
-    """Page to import or export characters"""
+    """Page to Create, import, and or export features and abilities"""
     return apology("TODO")
 
 @app.route("/races", methods=["GET", "POST"])
 @login_required
 def races():
-    """Page to import or export characters"""
+    """Page to Create, import, and or export races"""
     return apology("TODO")
 
 @app.route("/equipment", methods=["GET", "POST"])
 @login_required
 def equipment():
-    """Page to import or export characters"""
+    """Page to Create, import, and or export equipment"""
     return apology("TODO")
 
 @app.route("/skills", methods=["GET", "POST"])
 @login_required
 def skills():
-    """Page to import or export characters"""
+    """Page to Create, import, and or export spells"""
     return apology("TODO")
 
 @app.route("/languages", methods=["GET", "POST"])
 @login_required
 def languages():
-    """Page to import or export characters"""
+    """Page to Create, import, and or export languages"""
     return apology("TODO")
