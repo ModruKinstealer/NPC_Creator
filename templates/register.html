@@ -7,25 +7,33 @@
 {% block main %}
     <form action="/register" method="post">
         <div class="mb-3">
-            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text" required>
         </div>
         <div class="mb-3">
-            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password" min="8">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password" min="8" required>
         </div>
         <div class="mb-3">
-            <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="Confirm Password" type="password" min="8">
+            <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="Confirm Password" type="password" min="8" required>
         </div>
         <div class="mb-3">
-            <input class="form-control mx-auto w-auto" id="pwChallenge1" name="pwChallenge1" placeholder="Reset password challenge 1." type="text">
-            <input class="form-control mx-auto w-auto" id="pwChallenge1answer" name="pwChallenge1answer" placeholder="Answer for challenge 1" type="text">
+            <input class="form-control mx-auto w-auto" id="email" name="email" placeholder="johnsmith@email.com" type="email" required>
         </div>
-        <div class="mb-3">
-            <input class="form-control mx-auto w-auto" id="pwChallenge2" name="pwChallenge2" placeholder="Reset password challenge 2." type="text">
-            <input class="form-control mx-auto w-auto" id="pwChallenge2answer" name="pwChallenge2answer" placeholder="Answer for challenge 2" type="text">
-        </div>
-        <div class="mb-3">
-            <input class="form-control mx-auto w-auto" id="pwChallenge3" name="pwChallenge3" placeholder="Reset password challenge 3." type="text">
-            <input class="form-control mx-auto w-auto" id="pwChallenge3answer" name="pwChallenge3answer" placeholder="Answer for challenge 3" type="text">
+        <div>
+            <h3>
+                Create 3 challenges in the event you forget your password and need to reset it.
+            </h3>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-auto" id="pwChallenge1" name="pwChallenge1" placeholder="Challenge 1" type="text" required>
+                <input class="form-control mx-auto w-auto" id="pwChallenge1answer" name="pwChallenge1answer" placeholder="Answer 1" type="text" required>
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-auto" id="pwChallenge2" name="pwChallenge2" placeholder="Challenge 2" type="text" required>
+                <input class="form-control mx-auto w-auto" id="pwChallenge2answer" name="pwChallenge2answer" placeholder="Answer 2" type="text" required>
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-auto" id="pwChallenge3" name="pwChallenge3" placeholder="Challenge 3." type="text" required>
+                <input class="form-control mx-auto w-auto" id="pwChallenge3answer" name="pwChallenge3answer" placeholder="Answer 3" type="text" required>
+            </div>
         </div>
         <button class="btn btn-primary" type="submit">Register</button>
     </form>

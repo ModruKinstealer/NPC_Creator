@@ -1,6 +1,6 @@
 import os
-import sqlite3
 
+from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from tempfile import mkdtemp
@@ -17,6 +17,9 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
+
+# Configure CS50 Library to use SQLite database
+db = SQL("sqlite:///npc.db")
 
 
 @app.after_request
@@ -47,8 +50,6 @@ def login():
             return apology("must provide password", 403)
 
         # Query database for username
-        con = sqlite3.connect('npc.db')
-        db = con.cursor()
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
         # Ensure username exists and password is correct
@@ -83,33 +84,42 @@ def register():
     if request.method == "POST":
         # Validate inputs
         # Name, not empty and unique
-        con = sqlite3.connect('npc.db')
-        db = con.cursor()
-        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        rows = db.execute("SELECT COUNT(name) FROM users WHERE name=?", request.form.get("username"))
 
         if not request.form.get("username") or not request.form.get("password") or not request.form.get("confirmation"):
             return apology("Name, password, and confirm password fields are required. Please try again.")
 
-        if len(rows) > 0:
+        if len(rows) != 1:
             return apology("Username already in use, please try again.")
 
         # Password at least 8 characters long
-        if len(password) < 8:
+        if len(request.form.get("password")) < 8:
             return apology("Please choose a password with at least 8 characters.")
 
         # Password and confirm match
         if request.form.get("password") != request.form.get("confirmation"):
             return apology("Password and confirm password fields did not match.")
 
+        # Ensure challenges and answers are not empty
+        if not request.form.get("pwChallenge1") or not request.form.get("pwChallenge2") or not request.form.get("pwChallenge3") or not request.form.get("pwChallenge1answer") or not request.form.get("pwChallenge2answer") or not request.form.get("pwChallenge3answer"):
+            return apology("Please fill in the 3 challenges and their answers in case your password is lost and you need to reset it.")
+
         # If pass validation
+        # Create dictionary of challenges and their answers
+        challenges = {
+            request.form.get("pwChallenge1"): request.form.get("pwChallenge1answer"),
+            request.form.get("pwChallenge2"): request.form.get("pwChallenge2answer"),
+            request.form.get("pwChallenge3"): request.form.get("pwChallenge3answer")
+        }
+
         # Hash password
         hash = generate_password_hash(request.form.get("password"),method='sha256',salt_length=16)
 
         # Insert inputs into users db
-        db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", request.form.get("username"), hash)
+        db.execute("INSERT INTO users (name, hash, email, challenges) VALUES (?, ?, ?, ?)", request.form.get("username"), hash, request.form.get("email"), challenges)
 
         # Set the registered user as the logged in user and render /
-        user = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        user = db.execute("SELECT * FROM users WHERE name = ?", request.form.get("username"))
         session["user_id"] = user[0]["id"]
         return redirect("/")
         
