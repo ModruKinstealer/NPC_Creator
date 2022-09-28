@@ -1,0 +1,46 @@
+{
+  "name": "Abacus",
+  "type": "loot",
+  "img": "https://assets.forge-vtt.com/bazaar/core/icons/commodities/treasure/broach-jewel-gold-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>The abacus, also called a counting frame, is a calculating tool.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": "PHB pg. 150",
+    "quantity": 1,
+    "weight": 2,
+    "price": 2,
+    "attunement": 0,
+    "equipped": false,
+    "rarity": "common",
+    "identified": true,
+    "attributes": {
+      "spelldc": 10
+    },
+    "damage": {
+      "parts": []
+    }
+  },
+  "effects": [],
+  "flags": {
+    "core": {
+      "sourceId": "Compendium.dnd5e.items.ea4xclqsksEQB1QF"
+    },
+    "exportSource": {
+      "world": "foundryv10blankworld",
+      "system": "dnd5e",
+      "coreVersion": "10.286",
+      "systemVersion": "2.0.3"
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.0.1",
+    "coreVersion": "10.282",
+    "createdTime": 1661787233787,
+    "modifiedTime": 1661975593924,
+    "lastModifiedBy": "SxNcF6Tq9rVuiP7r"
+  }
+}
