@@ -148,12 +148,16 @@ def password():
             return apology("Must provide all current password, new password, and confirm new password", 403)
 
         # Passwords should be 8 or more characters long
-        elif len(request.form.get("newPassword")) < 8:
+        elif len(request.form.get("newPassword")) < 8 or len(request.form.get("confirmation")) < 8: 
             return apology("Passwords must contain 8 or more characters.")
 
         # Ensure new password and confirm password match
         elif request.form.get("newPassword") != request.form.get("confirmation"):
             return apology("New password and confirm passwords must match.")
+
+        # Ensure new password does not match old password
+        elif request.form.get("oldPassword") == request.form.get("confirmation"):
+            return apology("New password can not be the same as old password.")
 
         # Query database for username
         rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
