@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Spells
+{% endblock %}
+
+{% block main %}
+    <form action="/spells" method="post">
+        <div class="mb-3">
+            To do
+        </div>
+        <button class="btn btn-primary" type="submit">Update</button>
+    </form>
+{% endblock %}
