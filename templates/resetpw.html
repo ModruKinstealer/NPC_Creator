@@ -1,12 +1,23 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Register
+    Password reset
 {% endblock %}
 
 {% block main %}
-    <form action="/register" method="post">
+    <h2>Enter your user name or email address then choose a challenge from the drop down and enter in the answer for it.</h2>
+    <form action="/resetpw" method="post">
         <!-- To DO -->
         <!-- Drop down with the 3 challenges chosen at registration. Then a field to enter answer and submit button -->
+        <!-- Inputs for username and email fields -->
+        <input autocomplete="off" id="username" name="username" placeholder="johnsmith01" type="text">
+        <input autocomplete="off" id="email" name="email" placeholder="johnsmith@email.com" type="email">
+        <select autofocus name="challenge" class="mb-3">
+            <option disabled selected></option>
+            {% for symbol in qtyOver1 %}
+            <option value="{{ symbol.symbol }}">{{ symbol.symbol }}, {{ symbol.price }},  qty {{ symbol.qty }}</option>
+            {% endfor %}
+        </select>
+        <button class="btn btn-primary" type="submit">Reset</button>
     </form>
 {% endblock %}
