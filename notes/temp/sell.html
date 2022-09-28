@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                <span>{{ message }}</span>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">×</span>
+                </button>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+<h2>Pick a stock to sell.</h2>
+<form action="/sell" method="post">
+    <select autofocus name="symbol" class="mb-3">
+        <option disabled selected></option>
+        {% for symbol in qtyOver1 %}
+        <option value="{{ symbol.symbol }}">{{ symbol.symbol }}, {{ symbol.price }},  qty {{ symbol.qty }}</option>
+        {% endfor %}
+    </select>
+    <input autocomplete="off" id="shares" name="shares" placeholder="Qty" type="number" min="1">
+    <button class="btn btn-primary" type="submit">Sell</button>
+</form>
+
+{% endblock %}

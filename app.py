@@ -44,18 +44,18 @@ def login():
 
         # Ensure username was submitted
         if not request.form.get("username"):
-            return apology("must provide username", 403)
+            return apology("Must provide username", 403)
 
         # Ensure password was submitted
         elif not request.form.get("password"):
-            return apology("must provide password", 403)
+            return apology("Must provide password", 403)
 
         # Query database for username
         rows = db.execute("SELECT * FROM users WHERE name = ?", request.form.get("username"))
 
         # Ensure username exists and password is correct
         if len(rows) != 1 or not check_password_hash(rows[0]["pwhash"], request.form.get("password")):
-            return apology("invalid username and/or password", 403)
+            return apology("Invalid username and/or password", 403)
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
@@ -66,7 +66,7 @@ def login():
     # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("login.html")
-        
+
 
 @app.route("/logout")
 def logout():
@@ -125,7 +125,7 @@ def register():
         user = db.execute("SELECT * FROM users WHERE name = ?", request.form.get("username"))
         session["user_id"] = user[0]["id"]
         return redirect("/")
-        
+
     else:
         return render_template("register.html")
 
@@ -141,7 +141,7 @@ def password():
             return apology("Must provide all current password, new password, and confirm new password", 403)
 
         # Passwords should be 8 or more characters long
-        elif len(request.form.get("newPassword")) < 8 or len(request.form.get("confirmation")) < 8: 
+        elif len(request.form.get("newPassword")) < 8 or len(request.form.get("confirmation")) < 8:
             return apology("Passwords must contain 8 or more characters.")
 
         # Ensure new password and confirm password match
@@ -153,7 +153,7 @@ def password():
             return apology("New password can not be the same as old password.")
         print(request.form.get("oldPassword"))
         print(request.form.get("newPassword"))
-        
+
         # Query database for username
         rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
 
@@ -172,6 +172,7 @@ def password():
     else:
         return render_template("password.html")
 
+
 ## Everything below this needs to be completed
 @app.route("/")
 @login_required
@@ -180,7 +181,88 @@ def index():
     return apology("TODO")
 
 
-@app.route("/resetpw")
+@app.route("/resetpw", methods=["POST"])
 def resetpw():
-    """main page with character sheet"""
+    """Page to reset password if forgotten"""
+    if request.method == "POST":
+        # Either the user name field or the email field must be filled in
+        if not request.form.get("username") and not request.form.get("email"):
+            return apology("To Reset the pw we need either the user name or the email address.")
+        # Need to confirm that the user name or email entered are in the db
+        namerows = db.execute("SELECT * FROM users WHERE name = ?", request.form.get("username"))  
+        emailrows = db.execute("SELECT * FROM users WHERE email = ?", request.form.get("email")) 
+        if len(namerows) != 1 and len(emailrows) != 1:
+            return apology("Account not found. Try again or register for an account.")
+        
+        elif not request.form.get("username") and len(emailrows) == 1:
+            # Get challenges from users table
+            challengesjson = db.execute("SELECT challenges FROM users WHERE email=?", request.form.get("email"))
+            # Convert from Json to dict
+            challenges = json.loads(challengesjson)
+            render_template("resetpw.html", challenges=challenges)
+            # Need second page to load?
+
+    return render_template("resetpw.html")
+
+
+@app.route("/importExport", methods=["GET", "POST"])
+@login_required
+def importExport():
+    """Page to import or export characters"""
+    return apology("TODO")
+
+
+@app.route("/spells", methods=["GET", "POST"])
+@login_required
+def spells():
+    """Page to Create, import, and or export spells"""
+    return apology("TODO")
+
+
+@app.route("/monsters", methods=["GET", "POST"])
+@login_required
+def monsters():
+    """Page to Create, import, and or export monsters"""
+    return apology("TODO")
+
+
+@app.route("/feats", methods=["GET", "POST"])
+@login_required
+def feats():
+    """Page to Create, import, and or export feats"""
+    return apology("TODO")
+
+
+@app.route("/features", methods=["GET", "POST"])
+@login_required
+def features():
+    """Page to Create, import, and or export features and abilities"""
+    return apology("TODO")
+
+
+@app.route("/races", methods=["GET", "POST"])
+@login_required
+def races():
+    """Page to Create, import, and or export races"""
+    return apology("TODO")
+
+
+@app.route("/equipment", methods=["GET", "POST"])
+@login_required
+def equipment():
+    """Page to Create, import, and or export equipment"""
+    return apology("TODO")
+
+
+@app.route("/skills", methods=["GET", "POST"])
+@login_required
+def skills():
+    """Page to Create, import, and or export spells"""
+    return apology("TODO")
+
+
+@app.route("/languages", methods=["GET", "POST"])
+@login_required
+def languages():
+    """Page to Create, import, and or export languages"""
     return apology("TODO")
