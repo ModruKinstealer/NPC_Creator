@@ -180,7 +180,62 @@ def index():
     return apology("TODO")
 
 
-@app.route("/resetpw")
+@app.route("/resetpw", methods=["GET", "POST"])
+@login_required
 def resetpw():
-    """main page with character sheet"""
+    """Page to reset password if forgotten"""
+    return apology("TODO")
+
+@app.route("/import", methods=["GET", "POST"])
+@login_required
+def importExport():
+    """Page to import or export characters"""
+    return apology("TODO")
+
+@app.route("/spells", methods=["GET", "POST"])
+@login_required
+def spells():
+    """Page to import or export characters"""
+    return apology("TODO")
+
+@app.route("/monsters", methods=["GET", "POST"])
+@login_required
+def monsters():
+    """Page to import or export characters"""
+    return apology("TODO")
+
+@app.route("/feats", methods=["GET", "POST"])
+@login_required
+def feats():
+    """Page to import or export characters"""
+    return apology("TODO")
+
+@app.route("/features", methods=["GET", "POST"])
+@login_required
+def features():
+    """Page to import or export characters"""
+    return apology("TODO")
+
+@app.route("/races", methods=["GET", "POST"])
+@login_required
+def races():
+    """Page to import or export characters"""
+    return apology("TODO")
+
+@app.route("/equipment", methods=["GET", "POST"])
+@login_required
+def equipment():
+    """Page to import or export characters"""
+    return apology("TODO")
+
+@app.route("/skills", methods=["GET", "POST"])
+@login_required
+def skills():
+    """Page to import or export characters"""
+    return apology("TODO")
+
+@app.route("/languages", methods=["GET", "POST"])
+@login_required
+def languages():
+    """Page to import or export characters"""
     return apology("TODO")
