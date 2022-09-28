@@ -159,13 +159,13 @@ def password():
         rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
 
         # Ensure username exists and password is correct
-        if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("oldPassword")):
+        if len(rows) != 1 or not check_password_hash(rows[0]["pwhash"], request.form.get("oldPassword")):
             return apology("invalid password", 403)
 
         # Update DB with new password
         hash = generate_password_hash(request.form.get("newPassword"), method='sha256', salt_length=16)
         # Insert inputs into users db
-        db.execute("UPDATE users SET hash=? WHERE id IS ?", hash, session["user_id"])
+        db.execute("UPDATE users SET pwhash=? WHERE id IS ?", hash, session["user_id"])
         # Redirect user to home page
         return redirect("/")
 
