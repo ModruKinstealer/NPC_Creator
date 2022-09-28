@@ -153,8 +153,6 @@ def password():
             return apology("New password and confirm passwords must match.")
 
         # Query database for username
-        con = sqlite3.connect('npc.db')
-        db = con.cursor()
         rows = db.execute("SELECT * FROM users WHERE id = ?", session["user_id"])
 
         # Ensure username exists and password is correct
