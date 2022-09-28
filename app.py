@@ -1,4 +1,5 @@
 import os
+import json
 
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
@@ -111,12 +112,14 @@ def register():
             request.form.get("pwChallenge2"): request.form.get("pwChallenge2answer"),
             request.form.get("pwChallenge3"): request.form.get("pwChallenge3answer")
         }
+        # Convert dictionary of challenges to json, apparently you can't have a python dictionary as a value in a sql table
+        challenges = json.dumps(challenges)
 
         # Hash password
         hash = generate_password_hash(request.form.get("password"),method='sha256',salt_length=16)
 
         # Insert inputs into users db
-        db.execute("INSERT INTO users (name, hash, email, challenges) VALUES (?, ?, ?, ?)", request.form.get("username"), hash, request.form.get("email"), challenges)
+        db.execute("INSERT INTO users (name, pwhash, email, challenges) VALUES (?, ?, ?, ?)", request.form.get("username"), hash, request.form.get("email"), challenges)
 
         # Set the registered user as the logged in user and render /
         user = db.execute("SELECT * FROM users WHERE name = ?", request.form.get("username"))
