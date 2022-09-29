@@ -1,0 +1,88 @@
+{
+  "name": "forge-vtt-shared-compendiums-global",
+  "title": "Global (Shared Compendiums)",
+  "description": "<p>Compendia for assets that aren’t specific to an adventure, campaign, world</p>\n <br/><div style=\"border: 1px solid #eee;border-left-width: .25rem;border-left-color: #f0ad4e;border-radius: .25rem;padding: 10px;\">\n        <h5 style=\"margin:0px;\">Shared Compendium</h5>\n        <p style=\"margin-bottom:0px;\">This module allows you to share compendiums between your worlds.</p>\n        <p style=\"margin-bottom:0px;\">It cannot be auto-updated, therefore it cannot overwrite your compendiums and is therefore <strong>safe to unlock</strong>.</p></div>",
+  "version": "1.0",
+  "minimumCoreVersion": "0.6.0",
+  "compatibleCoreVersion": "9",
+  "author": "The Forge",
+  "packs": [
+    {
+      "name": "actor-1-global-actors",
+      "label": "Global Actors (Shared)",
+      "path": "packs/actor-1-global-actors.db",
+      "entity": "Actor",
+      "package": "forge-vtt-shared-compendiums-global"
+    },
+    {
+      "name": "item-1-global-spells",
+      "label": "Global Spells (Shared)",
+      "path": "packs/item-1-global-spells.db",
+      "entity": "Item",
+      "package": "forge-vtt-shared-compendiums-global"
+    },
+    {
+      "name": "item-2-global-items",
+      "label": "Global Items (Shared)",
+      "path": "packs/item-2-global-items.db",
+      "entity": "Item",
+      "package": "forge-vtt-shared-compendiums-global"
+    },
+    {
+      "name": "cards-1-global-cards",
+      "label": "Global Cards (Shared)",
+      "path": "packs/cards-1-global-cards.db",
+      "entity": "Cards",
+      "package": "forge-vtt-shared-compendiums-global"
+    },
+    {
+      "name": "item-3-global-class-features",
+      "label": "Global Class Features (Shared)",
+      "path": "packs/item-3-global-class-features.db",
+      "entity": "Item",
+      "package": "forge-vtt-shared-compendiums-global"
+    },
+    {
+      "name": "item-4-global-monster-features",
+      "label": "Global Monster Features (Shared)",
+      "path": "packs/item-4-global-monster-features.db",
+      "entity": "Item",
+      "package": "forge-vtt-shared-compendiums-global"
+    },
+    {
+      "name": "journalentry-1-global-journal-entries",
+      "label": "Global Journal Entries (Shared)",
+      "path": "packs/journalentry-1-global-journal-entries.db",
+      "entity": "JournalEntry",
+      "package": "forge-vtt-shared-compendiums-global"
+    },
+    {
+      "name": "scene-1-global-scenes",
+      "label": "Global Scenes (Shared)",
+      "path": "packs/scene-1-global-scenes.db",
+      "entity": "Scene",
+      "package": "forge-vtt-shared-compendiums-global"
+    },
+    {
+      "name": "macro-1-global-macros",
+      "label": "Global Macros (Shared)",
+      "path": "packs/macro-1-global-macros.db",
+      "entity": "Macro",
+      "package": "forge-vtt-shared-compendiums-global"
+    },
+    {
+      "name": "rolltable-1-global-roll-tables",
+      "label": "Global Roll Tables (Shared)",
+      "path": "packs/rolltable-1-global-roll-tables.db",
+      "entity": "RollTable",
+      "package": "forge-vtt-shared-compendiums-global"
+    },
+    {
+      "name": "playlist-1-global-playlists",
+      "label": "Global Playlists (Shared)",
+      "path": "packs/playlist-1-global-playlists.db",
+      "entity": "Playlist",
+      "package": "forge-vtt-shared-compendiums-global"
+    }
+  ]
+}

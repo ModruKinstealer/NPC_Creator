@@ -1,0 +1,5598 @@
+{
+  "name": "Sarule Kramonus",
+  "type": "character",
+  "img": "https://assets.forge-vtt.com/5f405e88575d34872f40d327/IoK%20Creatures/sarule.png",
+  "items": [
+    {
+      "_id": "0V94cOTT8gU0TzXS",
+      "name": "Rogue",
+      "type": "class",
+      "img": "icons/skills/melee/strike-sword-stabbed-brown.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.dnd5e.classes.xEb8jmA5HlNs7xTF"
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>As a rogue, you have the following class features.</p>\n<h3>Hit Points</h3>\n<p><strong>Hit Dice:</strong> 1d8 per rogue level<br /><strong>Hit Points at 1st Level:</strong> 8 + your Constitution modifier<br /><strong>Hit Points at Higher Levels:</strong> 1d8 (or 5) + your Constitution modifier per rogue level after 1st</p>\n<h3>Proficiencies</h3>\n<p><strong>Armor:</strong> Light armor<br /><strong>Weapons:</strong> Simple weapons, hand crossbows, longswords, rapiers, shortswords<br /><strong>Tools:</strong> Thieves' tools<br /><strong>Saving Throws:</strong> Dexterity, Intelligence<br /><strong>Skills:</strong> Choose four from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, and Stealth</p>\n<h3>Equipment</h3>\n<p>You start with the following equipment, in addition to the equipment granted by your background:</p>\n<ul>\n<li>(a) a rapier or (b) a shortsword</li>\n<li>(a) a shortbow and quiver of 20 arrows or (b) a shortsword</li>\n<li>(a) a burglar's pack, (b) a dungeoneer's pack, or (c) an explorer's pack</li>\n<li>(a) Leather armor, two daggers, and thieves' tools</li>\n</ul>\n<h1>Rogue Advancement</h1>\n<table>\n<thead>\n<tr>\n<td>Level</td>\n<td>Proficiency Bonus</td>\n<td>Sneak Attack</td>\n<td>Features</td>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1st</td>\n<td>+2</td>\n<td>1d6</td>\n<td>@Compendium[dnd5e.classfeatures.3sYPftQKnbbVnHrh]{Expertise}, @Compendium[dnd5e.classfeatures.DPN2Gfk8yi1Z5wp7]{Sneak Attack}, @Compendium[dnd5e.classfeatures.ohwfuwnvuoBWlSQr]{Thieves' Cant}</td>\n</tr>\n<tr>\n<td>2nd</td>\n<td>+2</td>\n<td>1d6</td>\n<td>@Compendium[dnd5e.classfeatures.01pcLg6PRu5zGrsb]{Cunning Action}</td>\n</tr>\n<tr>\n<td>3rd</td>\n<td>+2</td>\n<td>2d6</td>\n<td>@Compendium[dnd5e.classfeatures.80USV8ZFPIahpLd0]{Roguish Archetype}</td>\n</tr>\n<tr>\n<td>4th</td>\n<td>+2</td>\n<td>2d6</td>\n<td>@Compendium[dnd5e.classfeatures.v7MxFuTAgOsmxZCD]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>5th</td>\n<td>+3</td>\n<td>3d6</td>\n<td>@Compendium[dnd5e.classfeatures.Mm64SKAHJWYecgXS]{Uncanny Dodge}</td>\n</tr>\n<tr>\n<td>6th</td>\n<td>+3</td>\n<td>3d6</td>\n<td>@Compendium[dnd5e.classfeatures.3sYPftQKnbbVnHrh]{Expertise improvement}</td>\n</tr>\n<tr>\n<td>7th</td>\n<td>+3</td>\n<td>4d6</td>\n<td>@Compendium[dnd5e.classfeatures.a4P4DNMmH8CqSNkC]{Evasion}</td>\n</tr>\n<tr>\n<td>8th</td>\n<td>+3</td>\n<td>4d6</td>\n<td>@Compendium[dnd5e.classfeatures.v7MxFuTAgOsmxZCD]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>9th</td>\n<td>+4</td>\n<td>5d6</td>\n<td>Roguish Archetype feature</td>\n</tr>\n<tr>\n<td>10th</td>\n<td>+4</td>\n<td>5d6</td>\n<td>@Compendium[dnd5e.classfeatures.v7MxFuTAgOsmxZCD]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>11th</td>\n<td>+4</td>\n<td>6d6</td>\n<td>@Compendium[dnd5e.classfeatures.YN9xm6MCvse4Y60u]{Reliable Talent}</td>\n</tr>\n<tr>\n<td>12th</td>\n<td>+4</td>\n<td>6d6</td>\n<td>@Compendium[dnd5e.classfeatures.v7MxFuTAgOsmxZCD]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>13th</td>\n<td>+5</td>\n<td>7d6</td>\n<td>Roguish Archetype feature</td>\n</tr>\n<tr>\n<td>14th</td>\n<td>+5</td>\n<td>7d6</td>\n<td>@Compendium[dnd5e.classfeatures.fjsBk7zxoAbLf8ZI]{Blindsense}</td>\n</tr>\n<tr>\n<td>15th</td>\n<td>+5</td>\n<td>8d6</td>\n<td>@Compendium[dnd5e.classfeatures.V4pwFxlwHtNeB4w9]{Slippery Mind}</td>\n</tr>\n<tr>\n<td>16th</td>\n<td>+5</td>\n<td>8d6</td>\n<td>@Compendium[dnd5e.classfeatures.v7MxFuTAgOsmxZCD]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>17th</td>\n<td>+6</td>\n<td>9d6</td>\n<td>Roguish Archetype feature</td>\n</tr>\n<tr>\n<td>18th</td>\n<td>+6</td>\n<td>9d6</td>\n<td>@Compendium[dnd5e.classfeatures.L7nJSRosos8sHJH9]{Elusive}</td>\n</tr>\n<tr>\n<td>19th</td>\n<td>+6</td>\n<td>10d6</td>\n<td>@Compendium[dnd5e.classfeatures.v7MxFuTAgOsmxZCD]{Ability Score Improvement}</td>\n</tr>\n<tr>\n<td>20th</td>\n<td>+6</td>\n<td>10d6</td>\n<td>@Compendium[dnd5e.classfeatures.rQhWDaMHMn7iU4f2]{Stroke of Luck}</td>\n</tr>\n</tbody>\n</table>\n<h1>Roguish Archetypes</h1>\n<p>Rogues have many features in common, including their emphasis on perfecting their skills, their precise and deadly approach to combat, and their increasingly quick reflexes. But different rogues steer those talents in varying directions, embodied by the rogue archetypes. Your choice of archetype is a reflection of your focus—not necessarily an indication of your chosen profession, but a description of your preferred techniques.</p>\n<h2>Thief</h2>\n<p>You hone your skills in the larcenous arts. Burglars, bandits, cutpurses, and other criminals typically follow this archetype, but so do rogues who prefer to think of themselves as professional treasure seekers, explorers, delvers, and investigators. In addition to improving your agility and stealth, you learn skills useful for delving into ancient ruins, reading unfamiliar languages, and using magic items you normally couldn't employ.</p>\n<h3>Thief Features</h3>\n<p>3rd Level: @Compendium[dnd5e.classfeatures.ga3dt2zrCn2MHK8R]{Fast Hands} @Compendium[dnd5e.classfeatures.FGrbXs6Ku5qxFK5G]{Second-Story Work}</p>\n<p>9th Level: @Compendium[dnd5e.classfeatures.Ei1Oh4UAA2E30jcD]{Supreme Sneak}</p>\n<p>13th Level: @Compendium[dnd5e.classfeatures.NqWyHE7Rpw9lyKWu]{Use Magic Device}</p>\n<p>17th Level: @Compendium[dnd5e.classfeatures.LhRm1EeUMvp2EWhV]{Thief's Reflexes}</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "identifier": "",
+        "levels": 7,
+        "hitDice": "d8",
+        "hitDiceUsed": 0,
+        "advancement": [],
+        "saves": [
+          "dex",
+          "int"
+        ],
+        "skills": {
+          "number": 4,
+          "choices": [
+            "acr",
+            "ath",
+            "dec",
+            "ins",
+            "itm",
+            "inv",
+            "per",
+            "prf",
+            "prc",
+            "slt",
+            "ste"
+          ],
+          "value": [
+            "dec",
+            "ins",
+            "slt",
+            "ste"
+          ]
+        },
+        "spellcasting": {
+          "progression": "none",
+          "ability": "int"
+        },
+        "subclass": "SoulKnife",
+        "damage": {
+          "parts": []
+        },
+        "attunement": null
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": "dnd5e",
+        "systemVersion": "2.0.2",
+        "coreVersion": "10.284",
+        "createdTime": null,
+        "modifiedTime": 1663372259903,
+        "lastModifiedBy": "QhGE8Z8VEcAK07yU"
+      }
+    },
+    {
+      "_id": "dVvDprqLkKrIqNJd",
+      "name": "Expertise (Rogue)",
+      "type": "feat",
+      "img": "icons/skills/targeting/target-glowing-yellow.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 100000,
+      "flags": {},
+      "system": {
+        "description": {
+          "value": "<p>At 1st level, choose two of your skill proficiencies, or one of your skill proficiencies and your proficiency with thieves' tools. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.</p><p>At 6th level, you can choose two more of your proficiencies (in skills or with thieves' tools) to gain this benefit.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 96",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": ""
+        },
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": "",
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell",
+          "value": ""
+        },
+        "requirements": "Rogue 1",
+        "recharge": {
+          "value": null,
+          "charged": false
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "DH9HVOAP0SkQAMwg",
+      "name": "Sneak Attack",
+      "type": "feat",
+      "img": "icons/skills/melee/strike-dagger-arcane-pink.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 200000,
+      "flags": {
+        "betterRolls5e": {
+          "quickDamage": {
+            "context": {
+              "0": ""
+            },
+            "value": {
+              "0": true
+            },
+            "altValue": {
+              "0": true
+            }
+          },
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>Beginning at 1st level, you know how to strike subtly and exploit a foe's distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack if you have advantage on the attack roll. The attack must use a finesse or a ranged weapon.</p><p>You don't need advantage on the attack roll if another enemy of the target is within 5 feet of it, that enemy isn't incapacitated, and you don't have disadvantage on the attack roll.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 96",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": ""
+        },
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": "",
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null,
+          "type": ""
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "other",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "(ceil(@classes.rogue.levels /2))d6",
+              ""
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell",
+          "value": ""
+        },
+        "requirements": "Rogue 1",
+        "recharge": {
+          "value": null,
+          "charged": false
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "NAFLGs0uynXTNvLB",
+      "name": "Thieves' Cant",
+      "type": "feat",
+      "img": "icons/sundries/documents/document-torn-diagram-tan.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 300000,
+      "flags": {},
+      "system": {
+        "description": {
+          "value": "<p>During your rogue training you learned thieves' cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal conversation. Only another creature that knows thieves' cant understands such messages. It takes four times longer to convey such a message than it does to speak the same idea plainly.</p><p>In addition, you understand a set of secret signs and symbols used to convey short, simple messages, such as whether an area is dangerous or the territory of a thieves' guild, whether loot is nearby, or whether the people in an area are easy marks or will provide a safe house for thieves on the run.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 96",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": ""
+        },
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": "",
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell",
+          "value": ""
+        },
+        "requirements": "Rogue 1",
+        "recharge": {
+          "value": null,
+          "charged": false
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "Q1MfxQl0RS3gKFl9",
+      "name": "Cunning Action",
+      "type": "feat",
+      "img": "icons/magic/control/hypnosis-mesmerism-watch.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 1900000,
+      "flags": {
+        "betterRolls5e": {
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickOther": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>Starting at 2nd level, your quick thinking and agility allow you to move and act quickly. You can take a bonus action on each of your turns in combat. This action can be used only to take the <strong>Dash, Disengage, or Hide action.</strong></p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 96",
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": "self"
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "self"
+        },
+        "uses": {
+          "value": 0,
+          "max": "0",
+          "per": "",
+          "type": ""
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell",
+          "value": ""
+        },
+        "requirements": "Rogue 2",
+        "recharge": {
+          "value": null,
+          "charged": false
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "K0FTAJEeYtW8IKIs",
+      "name": "Uncanny Dodge",
+      "type": "feat",
+      "img": "icons/skills/movement/feet-winged-boots-brown.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 500000,
+      "flags": {},
+      "system": {
+        "description": {
+          "value": "<p>Starting at 5th level, when an attacker that you can see hits you with an attack, you can use your reaction to halve the attack's damage against you.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 96",
+        "activation": {
+          "type": "reaction",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": null,
+          "type": "self"
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "self"
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell",
+          "value": ""
+        },
+        "requirements": "Rogue 5",
+        "recharge": {
+          "value": null,
+          "charged": false
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "unHPhKHDrloehEXT",
+      "name": "Evasion",
+      "type": "feat",
+      "img": "icons/magic/light/beam-red-orange.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 600000,
+      "flags": {
+        "betterRolls5e": {
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickOther": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>At 7th level, your instinctive agility lets you dodge out of the way of certain area effects, such as a blue dragon's lightning breath or a fireball spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 79; 96",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": ""
+        },
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": "",
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null,
+          "type": ""
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell",
+          "value": ""
+        },
+        "requirements": "Monk 7, Rogue 7",
+        "recharge": {
+          "value": null,
+          "charged": false
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "0o2suSDiO4gbOXtg",
+      "name": "Roguish Archetype",
+      "type": "feat",
+      "img": "icons/magic/unholy/silhouette-robe-evil-power.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 700000,
+      "flags": {},
+      "system": {
+        "description": {
+          "value": "<p>At 3rd level, you choose an archetype that you emulate in the exercise of your rogue abilities, such as Thief. Your archetype choice grants you features at 3rd level and then again at 9th, 13th, and 17th level.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 96",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": ""
+        },
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": "",
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell",
+          "value": ""
+        },
+        "requirements": "Rogue 3",
+        "recharge": {
+          "value": null,
+          "charged": false
+        },
+        "featType": {
+          "value": "passive",
+          "_deprecated": true,
+          "type": "String",
+          "label": "Feat Type"
+        },
+        "time": {
+          "value": "",
+          "_deprecated": true
+        },
+        "damageType": {
+          "value": "",
+          "_deprecated": true
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "eNFSIDXlsUREOhVK",
+      "name": "Mage Hand",
+      "type": "spell",
+      "img": "icons/magic/water/water-hand.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 100001,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.dnd5e.spells.Utk1OQRwYkMkFRD3"
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>A spectral, floating hand appears at a point you choose within range. The hand lasts for the duration or until you dismiss it as an action. The hand vanishes if it is ever more than 30 feet away from you or if you cast this spell again.</p><p>You can use your action to control the hand. You can use the hand to manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour the contents out of a vial. You can move the hand up to 30 feet each time you use it.</p><p>The hand can't attack, activate magic items, or carry more than 10 pounds.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 256",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": 1,
+          "units": "minute"
+        },
+        "target": {
+          "value": 1,
+          "width": null,
+          "units": "",
+          "type": "space"
+        },
+        "range": {
+          "value": 30,
+          "long": 0,
+          "units": "ft"
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "util",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell",
+          "value": ""
+        },
+        "level": 0,
+        "school": "con",
+        "components": {
+          "value": "",
+          "vocal": true,
+          "somatic": true,
+          "material": false,
+          "ritual": false,
+          "concentration": false
+        },
+        "materials": {
+          "value": "",
+          "consumed": false,
+          "cost": 0,
+          "supply": 0
+        },
+        "preparation": {
+          "mode": "prepared",
+          "prepared": false
+        },
+        "scaling": {
+          "mode": "none",
+          "formula": ""
+        },
+        "attunement": null
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "SwvSPDrnXw83Prdm",
+      "name": "Fey Ancestry",
+      "type": "feat",
+      "img": "icons/creatures/mammals/elk-moose-marked-green.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 800000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.dnd5e.races.cnTbpPPeGW7vGjOV"
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>You have advantage on saving throws against being charmed, and magic can't put you to sleep.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 23, 39",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": ""
+        },
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": "",
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null,
+          "type": ""
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell",
+          "value": ""
+        },
+        "requirements": "Elf, Half-Elf",
+        "recharge": {
+          "value": null,
+          "charged": false
+        },
+        "featType": {
+          "value": "ability",
+          "_deprecated": true,
+          "type": "String",
+          "label": "Feat Type"
+        },
+        "time": {
+          "value": "",
+          "_deprecated": true
+        },
+        "damageType": {
+          "value": "",
+          "_deprecated": true
+        },
+        "attributes": {
+          "spelldc": 10
+        },
+        "attunement": null
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "KquVVC1d6HUXjF3N",
+      "name": "Trance",
+      "type": "feat",
+      "img": "https://assets.forge-vtt.com/5f384f3a51cf44b70e8dd982/RayGameAssets/icons/ggr-encode-thoughts.jpg",
+      "effects": [],
+      "folder": null,
+      "sort": 900000,
+      "flags": {
+        "betterRolls5e": {
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickOther": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "NPOcH30NgH6FNwv8",
+      "name": "Steady Aim",
+      "type": "feat",
+      "img": "https://assets.forge-vtt.com/5f384f3a51cf44b70e8dd982/RayGameAssets/icons/jwicons1-01-03.png",
+      "effects": [],
+      "folder": null,
+      "sort": 1000000,
+      "flags": {
+        "betterRolls5e": {
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickOther": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>As a bonus action, you give yourself advantage on your next attack roll on the current turn. You can use this bonus action only if you haven't moved during this turn, and after you use the bonus action, your speed is 0 until the end of the current turn.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "TCE 62",
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": null,
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "requirements": "rog lvl 3",
+        "recharge": {
+          "value": null,
+          "charged": false
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "0jTKS5Zi2Gnxpap5",
+      "name": "Thieves' Tools",
+      "type": "tool",
+      "img": "https://assets.forge-vtt.com/bazaar/core/icons/tools/hand/lockpicks-steel-grey.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 2700000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.dnd5e.items.woWZ1sO5IUVGzo58"
+        },
+        "betterRolls5e": {
+          "quickDesc": {
+            "value": false,
+            "altValue": false
+          },
+          "quickCheck": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "quantity": false
+            },
+            "altValue": {
+              "quantity": false
+            }
+          }
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>This set of tools includes a small file, a set of lock picks, a small mirror mounted on a metal handle, a set of narrow-bladed scissors, and a pair of pliers. Proficiency with these tools lets you add your proficiency bonus to any ability checks you make to disarm traps or open locks.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 154",
+        "quantity": 1,
+        "weight": 1,
+        "price": 25,
+        "attunement": 0,
+        "equipped": false,
+        "rarity": "common",
+        "identified": true,
+        "toolType": "",
+        "baseItem": "thief",
+        "ability": "dex",
+        "chatFlavor": "",
+        "proficient": 2,
+        "bonus": "",
+        "damage": {
+          "parts": []
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "jYXOkhJaTefxFgIt",
+      "name": "Psionic Power",
+      "type": "feat",
+      "img": "https://assets.forge-vtt.com/5f384f3a51cf44b70e8dd982/RayGameAssets/icons/grr.png",
+      "effects": [],
+      "folder": null,
+      "sort": 1800000,
+      "flags": {
+        "betterRolls5e": {
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickOther": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>3rd-level Soulknife feature</p>\n<p>You harbor a wellspring of psionic energy within yourself. This energy is represented by your Psionic Energy dice, which are each a <span title=\"Click to roll. SHIFT/CTRL to roll twice.\" data-packed-dice=\"{&quot;type&quot;:&quot;dice&quot;,&quot;rollable&quot;:true,&quot;toRoll&quot;:&quot;d6&quot;}\">d6</span>. You have a number of these dice equal to twice your proficiency bonus, and they fuel various psionic powers you have, which are detailed below.</p>\n<p>Some of your powers expend the Psionic Energy die they use, as specified in a power's description, and you can't use a power if it requires you to use a die when your dice are all expended. You regain all your expended Psionic Energy dice when you finish a long rest. In addition, as a bonus action, you can regain one expended Psionic Energy die, but you can't do so again until you finish a short or long rest.</p>\n<p>When you reach certain levels in this class, the size of your Psionic Energy dice increases: at 5th level (<span title=\"Click to roll. SHIFT/CTRL to roll twice.\" data-packed-dice=\"{&quot;type&quot;:&quot;dice&quot;,&quot;rollable&quot;:true,&quot;toRoll&quot;:&quot;d8&quot;}\">d8</span>), 11th level (<span title=\"Click to roll. SHIFT/CTRL to roll twice.\" data-packed-dice=\"{&quot;type&quot;:&quot;dice&quot;,&quot;rollable&quot;:true,&quot;toRoll&quot;:&quot;d10&quot;}\">d10</span>), and 17th level (<span title=\"Click to roll. SHIFT/CTRL to roll twice.\" data-packed-dice=\"{&quot;type&quot;:&quot;dice&quot;,&quot;rollable&quot;:true,&quot;toRoll&quot;:&quot;d12&quot;}\">d12</span>).</p>\n<p>The powers below use your Psionic Energy dice.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "TCE 63",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "requirements": "Soulkife 3",
+        "recharge": {
+          "value": null,
+          "charged": false
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "QheQ9mgW7gjnYSPp",
+      "name": "Psi-Bolstered Knack",
+      "type": "feat",
+      "img": "https://assets.forge-vtt.com/5f384f3a51cf44b70e8dd982/RayGameAssets/icons/grr.png",
+      "effects": [],
+      "folder": null,
+      "sort": 1100000,
+      "flags": {
+        "betterRolls5e": {
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickOther": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        },
+        "rsr5e": {
+          "quickDesc": {
+            "value": true
+          },
+          "quickFooter": {
+            "value": true
+          }
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>When your nonpsionic training fails you, your psionic power can help: if you fail an ability check using a skill or tool with which you have proficiency, you can roll one Psionic Energy die and add the number rolled to the check, potentially turning failure into success. You expend the die only if the roll succeeds.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "TCE 63",
+        "activation": {
+          "type": "special",
+          "cost": 0,
+          "condition": "fail an ability check using a skill or tool with which you have proficiency"
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": null,
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "requirements": "Soulknife 3",
+        "recharge": {
+          "value": null,
+          "charged": false
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": "dnd5e",
+        "systemVersion": "2.0.2",
+        "coreVersion": "10.284",
+        "createdTime": null,
+        "modifiedTime": 1663380865572,
+        "lastModifiedBy": "QhGE8Z8VEcAK07yU"
+      }
+    },
+    {
+      "_id": "fR6CdFg7hbcnjBTP",
+      "name": "Psychic Whispers",
+      "type": "feat",
+      "img": "https://assets.forge-vtt.com/5f384f3a51cf44b70e8dd982/RayGameAssets/icons/grr.png",
+      "effects": [],
+      "folder": null,
+      "sort": 1200000,
+      "flags": {
+        "betterRolls5e": {
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickOther": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>You can establish telepathic communication between yourself and others-perfect for quiet infiltration. As an action, choose one or more creatures you can see, up to a number of creatures equal to your proficiency bonus, and then roll one Psionic Energy die. For a number of hours equal to the number rolled, the chosen creatures can speak telepathically with you, and you can speak telepathically with them. To send or receive a message (no action required), you and the other creature must be within 1 mile of each other. A creature can't use this telepathy if it can't speak any languages, and a creature can end the telepathic connection at any time (no action required). You and the creature don't need to speak a common language to understand each other.</p>\n<div> </div>\n<p>The first time you use this power after each long rest, you don't expend the Psionic Energy die. All other times you use the power, you expend the die.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "TCE 63",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": null,
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "requirements": "Soulknife 3",
+        "recharge": {
+          "value": null,
+          "charged": false
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "emun2KCpuBVBJUzl",
+      "name": "Psychic Blades",
+      "type": "feat",
+      "img": "https://assets.forge-vtt.com/5f384f3a51cf44b70e8dd982/RayGameAssets/icons/icons-1029-05-10.png",
+      "effects": [],
+      "folder": null,
+      "sort": 1700000,
+      "flags": {
+        "betterRolls5e": {
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickOther": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          }
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>3rd-level Soulknife feature</p>\n<p>You can manifest your psionic power as shimmering blades of psychic energy. Whenever you take the <a href=\"https://5e.tools/actions.html#attack_phb\" data-vet-page=\"actions.html\" data-vet-source=\"PHB\" data-vet-hash=\"attack_phb\">Attack</a> action, you can manifest a psychic blade from your free hand and make the attack with that blade. This magic blade is a simple melee weapon with the finesse and thrown properties. It has a normal range of 60 feet and no long range, and on a hit, it deals psychic damage equal to <span title=\"Click to roll. SHIFT/CTRL to roll twice.\" data-packed-dice=\"{&quot;type&quot;:&quot;dice&quot;,&quot;rollable&quot;:true,&quot;toRoll&quot;:&quot;1d6&quot;}\">1d6</span> plus the ability modifier you used for the attack roll. The blade vanishes immediately after it hits or misses its target, and it leaves no mark on its target if it deals damage.</p>\n<p>After you attack with the blade, you can make a melee or ranged weapon attack with a second psychic blade as a bonus action on the same turn, provided your other hand is free to create it. The damage die of this bonus attack is <span title=\"Click to roll. SHIFT/CTRL to roll twice.\" data-packed-dice=\"{&quot;type&quot;:&quot;dice&quot;,&quot;rollable&quot;:true,&quot;toRoll&quot;:&quot;1d4&quot;}\">1d4</span>, instead of <span title=\"Click to roll. SHIFT/CTRL to roll twice.\" data-packed-dice=\"{&quot;type&quot;:&quot;dice&quot;,&quot;rollable&quot;:true,&quot;toRoll&quot;:&quot;1d6&quot;}\">1d6</span>.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "TCE 63",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": null,
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "requirements": "Soulknife 3",
+        "recharge": {
+          "value": null,
+          "charged": false
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "fHtUqNIGrLsemcgJ",
+      "name": "Psychic Blades",
+      "type": "weapon",
+      "img": "https://assets.forge-vtt.com/5f384f3a51cf44b70e8dd982/RayGameAssets/icons/icons-1029-05-10.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "betterRolls5e": {
+          "quickDesc": {
+            "value": false,
+            "altValue": false
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickVersatile": {
+            "value": false,
+            "altValue": false
+          },
+          "quickOther": {
+            "value": true,
+            "altValue": true,
+            "context": ""
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "quantity": false
+            },
+            "altValue": {
+              "quantity": false
+            }
+          },
+          "quickAttack": {
+            "value": true,
+            "altValue": true
+          },
+          "quickDamage": {
+            "context": {
+              "0": ""
+            },
+            "value": {
+              "0": true
+            },
+            "altValue": {
+              "0": true
+            }
+          }
+        }
+      },
+      "system": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "TCE 63",
+        "quantity": 1,
+        "weight": 0,
+        "price": 0,
+        "attunement": 0,
+        "equipped": false,
+        "rarity": "",
+        "identified": true,
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": "dex",
+        "actionType": "mwak",
+        "attackBonus": "0",
+        "chatFlavor": "Magic weapon, 60' normal, no long range,",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "1d6 +@mod",
+              "psychic"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "armor": {
+          "value": 10
+        },
+        "hp": {
+          "value": 0,
+          "max": 0,
+          "dt": null,
+          "conditions": ""
+        },
+        "weaponType": "simpleM",
+        "baseItem": "",
+        "properties": {
+          "ada": false,
+          "amm": false,
+          "fin": true,
+          "fir": false,
+          "foc": false,
+          "hvy": false,
+          "lgt": false,
+          "lod": false,
+          "mgc": false,
+          "rch": false,
+          "rel": false,
+          "ret": false,
+          "sil": false,
+          "spc": false,
+          "thr": true,
+          "two": false,
+          "ver": false
+        },
+        "proficient": true
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "duPffx8hEXm4IvYB",
+      "name": "Psychic Blades -Offhand",
+      "type": "weapon",
+      "img": "https://assets.forge-vtt.com/5f384f3a51cf44b70e8dd982/RayGameAssets/icons/icons-1029-05-10.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "betterRolls5e": {
+          "quickDesc": {
+            "value": false,
+            "altValue": false
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickVersatile": {
+            "value": false,
+            "altValue": false
+          },
+          "quickOther": {
+            "value": true,
+            "altValue": true,
+            "context": ""
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "quantity": false
+            },
+            "altValue": {
+              "quantity": false
+            }
+          },
+          "quickAttack": {
+            "value": true,
+            "altValue": true
+          },
+          "quickDamage": {
+            "context": {
+              "0": ""
+            },
+            "value": {
+              "0": true
+            },
+            "altValue": {
+              "0": true
+            }
+          }
+        },
+        "core": {
+          "sourceId": "Item.fHtUqNIGrLsemcgJ"
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>3rd-level Soulknife feature</p>\n<p>You can manifest your psionic power as shimmering blades of psychic energy. Whenever you take the <a href=\"https://5e.tools/actions.html#attack_phb\" data-vet-page=\"actions.html\" data-vet-source=\"PHB\" data-vet-hash=\"attack_phb\">Attack</a> action, you can manifest a psychic blade from your free hand and make the attack with that blade. This magic blade is a simple melee weapon with the finesse and thrown properties. It has a normal range of 60 feet and no long range, and on a hit, it deals psychic damage equal to <span title=\"Click to roll. SHIFT/CTRL to roll twice.\" data-packed-dice=\"{&quot;type&quot;:&quot;dice&quot;,&quot;rollable&quot;:true,&quot;toRoll&quot;:&quot;1d6&quot;}\">1d6</span> plus the ability modifier you used for the attack roll. The blade vanishes immediately after it hits or misses its target, and it leaves no mark on its target if it deals damage.</p>\n<p>After you attack with the blade, you can make a melee or ranged weapon attack with a second psychic blade as a bonus action on the same turn, provided your other hand is free to create it. The damage die of this bonus attack is <span title=\"Click to roll. SHIFT/CTRL to roll twice.\" data-packed-dice=\"{&quot;type&quot;:&quot;dice&quot;,&quot;rollable&quot;:true,&quot;toRoll&quot;:&quot;1d4&quot;}\">1d4</span>, instead of <span title=\"Click to roll. SHIFT/CTRL to roll twice.\" data-packed-dice=\"{&quot;type&quot;:&quot;dice&quot;,&quot;rollable&quot;:true,&quot;toRoll&quot;:&quot;1d6&quot;}\">1d6</span>.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "TCE 63",
+        "quantity": 1,
+        "weight": 0,
+        "price": 0,
+        "attunement": 0,
+        "equipped": false,
+        "rarity": "",
+        "identified": true,
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": 60,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": "dex",
+        "actionType": "mwak",
+        "attackBonus": "0",
+        "chatFlavor": "Magic weapon, 60' normal, no long range,",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "1d4 +@mod",
+              "psychic"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "armor": {
+          "value": 10
+        },
+        "hp": {
+          "value": 0,
+          "max": 0,
+          "dt": null,
+          "conditions": ""
+        },
+        "weaponType": "simpleM",
+        "baseItem": "",
+        "properties": {
+          "ada": false,
+          "amm": false,
+          "fin": true,
+          "fir": false,
+          "foc": false,
+          "hvy": false,
+          "lgt": false,
+          "lod": false,
+          "mgc": false,
+          "rch": false,
+          "rel": false,
+          "ret": false,
+          "sil": false,
+          "spc": false,
+          "thr": true,
+          "two": false,
+          "ver": false
+        },
+        "proficient": true
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "4TUlx5VNvdaIHebF",
+      "name": "Sneak Attack",
+      "type": "feat",
+      "img": "icons/skills/melee/strike-dagger-arcane-pink.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 1500000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.dnd5e.classfeatures.DPN2Gfk8yi1Z5wp7"
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>Beginning at 1st level, you know how to strike subtly and exploit a foe's distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack if you have advantage on the attack roll. The attack must use a finesse or a ranged weapon.</p><p>You don't need advantage on the attack roll if another enemy of the target is within 5 feet of it, that enemy isn't incapacitated, and you don't have disadvantage on the attack roll.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 96",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": "",
+          "units": ""
+        },
+        "target": {
+          "value": "",
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": "",
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null,
+          "type": ""
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "other",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "(ceil(@classes.rogue.levels /2))d6",
+              ""
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell",
+          "value": ""
+        },
+        "requirements": "Rogue 1",
+        "recharge": {
+          "value": null,
+          "charged": false
+        },
+        "attunement": null
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "EyHwCTekFnzvZ4ed",
+      "name": "Sneak",
+      "type": "weapon",
+      "img": "https://assets.forge-vtt.com/5f384f3a51cf44b70e8dd982/RayGameAssets/icons/Skills/weapon_39.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "betterRolls5e": {
+          "quickDesc": {
+            "value": false,
+            "altValue": false
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickVersatile": {
+            "value": false,
+            "altValue": false
+          },
+          "quickOther": {
+            "value": true,
+            "altValue": true,
+            "context": ""
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "quantity": false
+            },
+            "altValue": {
+              "quantity": false
+            }
+          },
+          "quickAttack": {
+            "value": true,
+            "altValue": true
+          },
+          "quickDamage": {
+            "context": {
+              "0": ""
+            },
+            "value": {
+              "0": true
+            },
+            "altValue": {
+              "0": true
+            }
+          }
+        },
+        "rsr5e": {
+          "quickDamage": {
+            "context": {
+              "0": ""
+            },
+            "value": {
+              "0": true
+            }
+          },
+          "quickOther": {
+            "context": ""
+          },
+          "quickDesc": {
+            "value": false
+          },
+          "quickFooter": {
+            "value": true
+          },
+          "consumeQuantity": {
+            "value": false
+          }
+        }
+      },
+      "system": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "quantity": 1,
+        "weight": 0,
+        "price": 0,
+        "attunement": 0,
+        "equipped": false,
+        "rarity": "",
+        "identified": true,
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "other",
+        "attackBonus": "0",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "(ceil(@classes.rogue.levels /2))d6",
+              "psychic"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "armor": {
+          "value": 10
+        },
+        "hp": {
+          "value": 0,
+          "max": 0,
+          "dt": null,
+          "conditions": ""
+        },
+        "weaponType": "simpleM",
+        "baseItem": "",
+        "properties": {
+          "ada": false,
+          "amm": false,
+          "fin": false,
+          "fir": false,
+          "foc": false,
+          "hvy": false,
+          "lgt": false,
+          "lod": false,
+          "mgc": false,
+          "rch": false,
+          "rel": false,
+          "ret": false,
+          "sil": false,
+          "spc": false,
+          "thr": false,
+          "two": false,
+          "ver": false
+        },
+        "proficient": true
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": "dnd5e",
+        "systemVersion": "2.0.2",
+        "coreVersion": "10.284",
+        "createdTime": null,
+        "modifiedTime": 1662769799328,
+        "lastModifiedBy": "QhGE8Z8VEcAK07yU"
+      }
+    },
+    {
+      "_id": "bquZfk3Mp8rXgN4c",
+      "name": "Thermal Cube",
+      "type": "loot",
+      "img": "https://assets.forge-vtt.com/5f384f3a51cf44b70e8dd982/RayGameAssets/icons/icons-1029-02-01.png",
+      "effects": [],
+      "folder": null,
+      "sort": 400000,
+      "flags": {},
+      "system": {
+        "description": {
+          "value": "<p>This 3-inch cube of solid brimstone generates enough dry heat to keep the temperature within 15 feet of it at 95 degrees Fahrenheit (35 degrees Celsius).</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "IDRotF 316",
+        "quantity": 1,
+        "weight": 0.05,
+        "price": 0,
+        "attunement": 0,
+        "equipped": false,
+        "rarity": "common",
+        "identified": true
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "omJ6UIxmTjRRrPcD",
+      "name": "Silk Rope (50 ft.)",
+      "type": "consumable",
+      "img": "https://assets.forge-vtt.com/bazaar/systems/dnd5e/assets/icons/items/inventory/rope.jpg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.forge-vtt-shared-compendiums-forgelmopsharedcompendium.items.iK3E9fEYlxTFNohQ"
+        },
+        "scene-packer": {
+          "hash": "70a5dfdb69abc163c4fb7da8361060a59c8b7ab3",
+          "sourceId": "Item.PPrJH4BYbAwW3Hqp"
+        },
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "quantity": false,
+              "use": true
+            },
+            "altValue": {
+              "quantity": false,
+              "use": true
+            }
+          }
+        },
+        "cf": {
+          "id": "temp_ifod6anw85f",
+          "path": "Items#/CF_SEP/Common",
+          "color": "#000000"
+        },
+        "exportSource": {
+          "world": "lmop",
+          "system": "dnd5e",
+          "coreVersion": "9.269",
+          "systemVersion": "1.6.3"
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p><span style=\"color:#191813;font-size:13px\">Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check.</span></p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 153",
+        "quantity": 1,
+        "weight": 5,
+        "price": 10,
+        "attunement": 0,
+        "equipped": false,
+        "rarity": "common",
+        "identified": true,
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 1,
+          "max": "1",
+          "per": "charges",
+          "autoDestroy": false,
+          "autoUse": true
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "abil",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "str",
+          "dc": 17,
+          "scaling": "flat"
+        },
+        "consumableType": "trinket"
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "J33hSNiZqJBzSqFk",
+      "name": "Pouch",
+      "type": "backpack",
+      "img": "https://assets.forge-vtt.com/bazaar/core/icons/containers/bags/coinpouch-simple-tan.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 2300001,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.dnd5e.items.9bWTRRDym06PzSAf"
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>A cloth or leather pouch can hold up to 20 sling bullets or 50 blowgun needles, among other things. A compartmentalized pouch for holding spell components is called a component pouch. A pouch can hold up to ⅕ cubic foot or 6 pounds of gear.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 153",
+        "quantity": 1,
+        "weight": 1,
+        "price": 0.5,
+        "attunement": 0,
+        "equipped": false,
+        "rarity": "common",
+        "identified": true,
+        "capacity": {
+          "type": "weight",
+          "value": 6,
+          "weightless": false
+        },
+        "currency": {
+          "cp": 0,
+          "sp": 0,
+          "ep": 0,
+          "gp": 0,
+          "pp": 0
+        },
+        "damage": {
+          "parts": []
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "3IyH1B93B5iMzEnr",
+      "name": "Traveler's Clothes",
+      "type": "equipment",
+      "img": "https://assets.forge-vtt.com/bazaar/core/icons/equipment/chest/shirt-collared-brown.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 800000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.dnd5e.items.SsAmWV6YBqeOFihT"
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>A set of clothes worn by travellers.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 150",
+        "quantity": 1,
+        "weight": 4,
+        "price": 2,
+        "attunement": 0,
+        "equipped": false,
+        "rarity": "common",
+        "identified": true,
+        "activation": {
+          "type": "none",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "armor": {
+          "value": null,
+          "type": "clothing",
+          "dex": null
+        },
+        "hp": {
+          "value": 0,
+          "max": 0,
+          "dt": null,
+          "conditions": ""
+        },
+        "baseItem": "",
+        "speed": {
+          "value": null,
+          "conditions": ""
+        },
+        "strength": 0,
+        "stealth": false,
+        "proficient": true
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "cJb12iuRupYaCedI",
+      "name": "Studded Leather Armor",
+      "type": "equipment",
+      "img": "icons/equipment/chest/breastplate-rivited-red.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "betterRolls5e": {
+          "critRange": {
+            "value": null
+          },
+          "critDamage": {
+            "value": ""
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickOther": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "quantity": false
+            },
+            "altValue": {
+              "quantity": false
+            }
+          }
+        },
+        "core": {
+          "sourceId": "Compendium.forge-vtt-shared-compendiums-forgelmopsharedcompendium.items.CRGwrZBTIZU6vCoN"
+        },
+        "scene-packer": {
+          "hash": "6f66b037eabd536f58212c4c2049e7e516581b9e",
+          "sourceId": "Item.CRGwrZBTIZU6vCoN"
+        },
+        "cf": {
+          "id": "temp_rtlyklmtujd",
+          "path": "armor#/CF_SEP/Common",
+          "color": "#000000"
+        },
+        "rsr5e": {
+          "quickDesc": {
+            "value": true
+          },
+          "quickFooter": {
+            "value": true
+          },
+          "consumeQuantity": {
+            "value": false
+          }
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div>\n\t\t\t<div><i>Light armor</i></div>\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"col-4\">45 gp, 13 lb.</div>\n\t\t\t\t<div class=\"col-8 text-right\">AC 12 + Dex  </div>\n\t\t\t</div>\n\t\t</div>\n\t\t<hr />\n\t\t<div class=\"rd__b  rd__b--2\"><p>Made from tough but flexible leather, studded leather is reinforced with close-set rivets or spikes.</p></div>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB",
+        "quantity": 1,
+        "weight": 13,
+        "price": 45,
+        "attunement": 0,
+        "equipped": true,
+        "rarity": "",
+        "identified": false,
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": null,
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "armor": {
+          "value": 12,
+          "type": "light",
+          "dex": null
+        },
+        "hp": {
+          "value": 0,
+          "max": 0,
+          "dt": null,
+          "conditions": ""
+        },
+        "baseItem": "",
+        "speed": {
+          "value": null,
+          "conditions": ""
+        },
+        "strength": null,
+        "stealth": false,
+        "proficient": true
+      },
+      "ownership": {
+        "default": 0,
+        "0CZ9ccWieJTQlNFS": 3,
+        "hA7v9W22QTeoehXt": 3
+      },
+      "_stats": {
+        "systemId": "dnd5e",
+        "systemVersion": "2.0.2",
+        "coreVersion": "10.284",
+        "createdTime": null,
+        "modifiedTime": 1663369345080,
+        "lastModifiedBy": "QhGE8Z8VEcAK07yU"
+      }
+    },
+    {
+      "_id": "w74pPDgvsYqC6DJv",
+      "name": "Navigator’s Tools",
+      "type": "tool",
+      "img": "https://assets.forge-vtt.com/bazaar/systems/dnd5e/assets/icons/items/inventory/backpack.jpg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.forge-vtt-shared-compendiums-forgelmopsharedcompendium.items.C2s692KqSOthbPzM"
+        },
+        "scene-packer": {
+          "hash": "11570647d2509d50f36846a155140db2254fea4d",
+          "sourceId": "Item.n7LCmSztsU6IPfsA"
+        },
+        "cf": {
+          "id": "temp_8uok96vuq98",
+          "path": "tools",
+          "color": "#000000"
+        },
+        "betterRolls5e": {
+          "quickDesc": {
+            "value": false,
+            "altValue": false
+          },
+          "quickCheck": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "quantity": false
+            },
+            "altValue": {
+              "quantity": false
+            }
+          }
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>This set of instruments is used for navigation at sea. Proficiency with navigator's tools lets you chart a ship's course and follow navigation charts. In addition, these tools allow you to add your proficiency bonus to any ability check you make to avoid getting lost at sea.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 154",
+        "quantity": 1,
+        "weight": 2,
+        "price": 25,
+        "attunement": 0,
+        "equipped": false,
+        "rarity": "",
+        "identified": true,
+        "toolType": "",
+        "baseItem": "",
+        "ability": "int",
+        "chatFlavor": "",
+        "proficient": 0,
+        "bonus": "",
+        "damage": {
+          "parts": []
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "0CZ9ccWieJTQlNFS": 3,
+        "hA7v9W22QTeoehXt": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "KK0KHQiSFxOXGj1V",
+      "name": "Chalk (1 piece)",
+      "type": "loot",
+      "img": "icons/commodities/bones/bone-fragments-grey.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 100000,
+      "flags": {
+        "vtta": {
+          "dndbeyond": {
+            "type": "Gear"
+          }
+        },
+        "magicitems": {
+          "enabled": false
+        },
+        "core": {
+          "sourceId": "Compendium.forge-vtt-shared-compendiums-forgelmopsharedcompendium.items.CoGKHHDsjMFdB1Fy"
+        },
+        "scene-packer": {
+          "hash": "8c0a3d51bfe701adb1955b4e0e76be553b02b8ac",
+          "sourceId": "Item.CoGKHHDsjMFdB1Fy"
+        },
+        "cf": {
+          "id": "temp_ifod6anw85f",
+          "path": "Items#/CF_SEP/Common",
+          "color": "#000000"
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div>\n\t\t\t<div><i>Adventuring gear</i></div>\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"col-4\">1 cp</div>\n\t\t\t\t<div class=\"col-8 text-right\">  </div>\n\t\t\t</div>\n\t\t</div>\n\t\t<hr />\n\t\t",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB",
+        "quantity": 1,
+        "weight": 0.05,
+        "price": 0.01,
+        "attunement": 0,
+        "equipped": true,
+        "rarity": "common",
+        "identified": false,
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "0CZ9ccWieJTQlNFS": 3,
+        "hA7v9W22QTeoehXt": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "YgodSqoOMCbuMVp2",
+      "name": "Backpack",
+      "type": "backpack",
+      "img": "icons/containers/bags/pack-simple-leather.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.plutonium.items.AyK6HdALci15SgLL"
+        },
+        "scene-packer": {
+          "hash": "3ad346ef9d5ae402b02d77d4e5ad41cf8f870e10",
+          "sourceId": "Item.3J8no4WNdGKLbemP"
+        },
+        "cf": {
+          "id": "temp_ifod6anw85f",
+          "path": "Items#/CF_SEP/Common",
+          "color": "#000000"
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div>\n\t\t\t<div><i>Adventuring gear</i></div>\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"col-4\">2 gp, 5 lb.</div>\n\t\t\t\t<div class=\"col-8 text-right\">  </div>\n\t\t\t</div>\n\t\t</div>\n\t\t<hr />\n\t\t<div class=\"rd__b  rd__b--2\"><p>A <i>backpack</i> can hold one cubic foot or 30 pounds of gear. You can also strap items, such as a bedroll or a coil of rope, to the outside of a <i>backpack</i>.</p></div>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB",
+        "quantity": 1,
+        "weight": 5,
+        "price": 2,
+        "attunement": 0,
+        "equipped": true,
+        "rarity": "common",
+        "identified": false,
+        "capacity": {
+          "type": "weight",
+          "value": 30,
+          "weightless": false
+        },
+        "currency": {
+          "cp": 0,
+          "sp": 0,
+          "ep": 0,
+          "gp": 0,
+          "pp": 0
+        },
+        "damage": {
+          "parts": []
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "0CZ9ccWieJTQlNFS": 3,
+        "hA7v9W22QTeoehXt": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "bfBhL9DokAJHws87",
+      "name": "Waterskin",
+      "type": "consumable",
+      "img": "icons/sundries/survival/wetskin-leather-purple.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "vtta": {
+          "dndbeyond": {
+            "type": "Gear"
+          }
+        },
+        "magicitems": {
+          "enabled": false
+        },
+        "core": {
+          "sourceId": "Compendium.forge-vtt-shared-compendiums-forgelmopsharedcompendium.items.IFt1KzJzIrC7QJ2F"
+        },
+        "scene-packer": {
+          "hash": "d5406deb51c959d2ca17044f3808924fb2a750a3",
+          "sourceId": "Item.IFt1KzJzIrC7QJ2F"
+        },
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "quantity": false,
+              "use": true
+            },
+            "altValue": {
+              "quantity": false,
+              "use": true
+            }
+          }
+        },
+        "cf": {
+          "id": "temp_ifod6anw85f",
+          "path": "Items#/CF_SEP/Common",
+          "color": "#000000"
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div>\n\t\t\t<div><i>Adventuring gear</i></div>\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"col-4\">2 sp, 5 lb. (full)</div>\n\t\t\t\t<div class=\"col-8 text-right\">  </div>\n\t\t\t</div>\n\t\t</div>\n\t\t<hr />\n\t\t<div class=\"rd__b  rd__b--2\"><p>A <i>waterskin</i> can hold up to 4 pints of liquid.</p></div>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB",
+        "quantity": 1,
+        "weight": 5,
+        "price": 0.2,
+        "attunement": 0,
+        "equipped": true,
+        "rarity": "common",
+        "identified": false,
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": 0,
+          "units": ""
+        },
+        "target": {
+          "value": 0,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "touch"
+        },
+        "uses": {
+          "value": 4,
+          "max": "4",
+          "per": "charges",
+          "autoDestroy": false,
+          "autoUse": true
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "util",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "consumableType": "food"
+      },
+      "ownership": {
+        "default": 0,
+        "0CZ9ccWieJTQlNFS": 3,
+        "hA7v9W22QTeoehXt": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "82p4FcxJAfvwW3xA",
+      "name": "Comfortable Lifestyle (1 Month)",
+      "type": "consumable",
+      "img": "https://assets.forge-vtt.com/5f384f3a51cf44b70e8dd982/RayGameAssets/equipment/fish-02-01.png",
+      "effects": [],
+      "folder": "yOsLZRXqZ1JMvNFI",
+      "sort": 200001,
+      "flags": {
+        "betterRolls5e": {
+          "quickDesc": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickAttack": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickSave": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickDamage": {
+            "type": "Array",
+            "value": [],
+            "altValue": [],
+            "context": []
+          },
+          "quickProperties": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "type": "Boolean",
+            "value": {
+              "quantity": false,
+              "use": false,
+              "resource": true
+            },
+            "altValue": {
+              "quantity": false,
+              "use": false,
+              "resource": true
+            }
+          },
+          "quickTemplate": {
+            "type": "Boolean",
+            "value": false,
+            "altValue": false
+          },
+          "quickOther": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true,
+            "context": ""
+          },
+          "quickFlavor": {
+            "type": "Boolean",
+            "value": true,
+            "altValue": true
+          },
+          "quickPrompt": {
+            "type": "Boolean",
+            "value": false,
+            "altValue": false
+          }
+        },
+        "core": {
+          "sourceId": "Item.K7ZWSeChpliMCWMx"
+        },
+        "scene-packer": {
+          "hash": "6083a4bd6c7f3237d8b0fe4f15d81d1294848621"
+        },
+        "rsr5e": {
+          "quickDesc": {
+            "value": true
+          },
+          "quickFooter": {
+            "value": true
+          },
+          "consumeQuantity": {
+            "value": true
+          }
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>Choosing a comfortable lifestyle means that you can afford nicer clothing and can easily maintain your equipment. You live in a small cottage in a middle-class neighborhood or in a private room at a fine inn. You associate with merchants, skilled tradespeople, and military officers.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB 157",
+        "quantity": 1,
+        "weight": 0,
+        "price": 60,
+        "attunement": 0,
+        "equipped": false,
+        "rarity": "",
+        "identified": true,
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 0,
+          "max": 0,
+          "per": null,
+          "autoDestroy": false
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": null
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "consumableType": "potion"
+      },
+      "ownership": {
+        "default": 2,
+        "hA7v9W22QTeoehXt": 3
+      },
+      "_stats": {
+        "systemId": "dnd5e",
+        "systemVersion": "2.0.2",
+        "coreVersion": "10.284",
+        "createdTime": null,
+        "modifiedTime": 1662774046607,
+        "lastModifiedBy": "QhGE8Z8VEcAK07yU"
+      }
+    },
+    {
+      "_id": "jmE4Si8HRvzHfGwp",
+      "name": "Arrow",
+      "type": "consumable",
+      "img": "icons/containers/ammunition/arrows-quiver-black.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "betterRolls5e": {
+          "quickDamage": {
+            "context": {
+              "0": ""
+            },
+            "value": {
+              "0": true
+            },
+            "altValue": {
+              "0": true
+            }
+          },
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "critRange": {
+            "value": null
+          },
+          "critDamage": {
+            "value": ""
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickAttack": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "quantity": false
+            },
+            "altValue": {
+              "quantity": false
+            }
+          }
+        },
+        "core": {
+          "sourceId": "Compendium.forge-vtt-shared-compendiums-forgelmopsharedcompendium.items.Ew5ivJ9shlFoA2Vi"
+        },
+        "scene-packer": {
+          "hash": "ada14d5581a5c527f5812134032c404ab264ab10",
+          "sourceId": "Item.Ew5ivJ9shlFoA2Vi"
+        },
+        "cf": {
+          "id": "temp_6yhh6i6u6eq",
+          "path": "weapons#/CF_SEP/Common",
+          "color": "#000000"
+        },
+        "rsr5e": {
+          "quickDamage": {
+            "context": {
+              "0": ""
+            },
+            "value": {
+              "0": true
+            }
+          },
+          "quickOther": {
+            "context": ""
+          },
+          "quickDesc": {
+            "value": true
+          },
+          "quickFooter": {
+            "value": true
+          },
+          "quickAttack": {
+            "value": true
+          },
+          "consumeQuantity": {
+            "value": true
+          }
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<div>\n\t\t\t<div><i>Ammunition</i></div>\n\t\t\t<div class=\"row\">\n\t\t\t\t<div class=\"col-4\">5 cp, 0.8 oz.</div>\n\t\t\t\t<div class=\"col-8 text-right\">  </div>\n\t\t\t</div>\n\t\t</div>\n\t\t<hr />\n\t\t",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB",
+        "quantity": 25,
+        "weight": 0.05,
+        "price": 0.05,
+        "attunement": 0,
+        "equipped": true,
+        "rarity": "",
+        "identified": false,
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": 5,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": "",
+          "autoDestroy": false
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "rwak",
+        "attackBonus": "0",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "",
+              "piercing"
+            ]
+          ],
+          "versatile": "",
+          "value": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "consumableType": "ammo",
+        "attributes": {
+          "spelldc": 10
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "0CZ9ccWieJTQlNFS": 3,
+        "hA7v9W22QTeoehXt": 3
+      },
+      "_stats": {
+        "systemId": "dnd5e",
+        "systemVersion": "2.0.2",
+        "coreVersion": "10.284",
+        "createdTime": null,
+        "modifiedTime": 1663371109866,
+        "lastModifiedBy": "QhGE8Z8VEcAK07yU"
+      }
+    },
+    {
+      "_id": "sfHpoqm12ojOkdD7",
+      "name": "Longbow",
+      "type": "weapon",
+      "img": "https://assets.forge-vtt.com/bazaar/core/icons/weapons/bows/longbow-leather-green.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 1900001,
+      "flags": {
+        "scene-packer": {
+          "hash": "ce91625b7c2aa90e80a8c9ed9e950a479365f017"
+        },
+        "betterRolls5e": {
+          "quickDamage": {
+            "context": {
+              "0": ""
+            },
+            "value": {
+              "0": true
+            },
+            "altValue": {
+              "0": true
+            }
+          },
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": false,
+            "altValue": false
+          },
+          "quickAttack": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickVersatile": {
+            "value": false,
+            "altValue": false
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "quantity": false,
+              "resource": true
+            },
+            "altValue": {
+              "quantity": false,
+              "resource": true
+            }
+          }
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>A thick shaft of laminated wood is bowed by a taut string capable of launching deadly arrows at long distances.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 149",
+        "quantity": 1,
+        "weight": 2,
+        "price": 50,
+        "attunement": 0,
+        "equipped": true,
+        "rarity": "common",
+        "identified": true,
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": 0,
+          "units": ""
+        },
+        "target": {
+          "value": 0,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": 150,
+          "long": 600,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": ""
+        },
+        "consume": {
+          "type": "ammo",
+          "target": "jmE4Si8HRvzHfGwp",
+          "amount": 1
+        },
+        "ability": "",
+        "actionType": "rwak",
+        "attackBonus": "0",
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "1d8 + @mod",
+              "piercing"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "armor": {
+          "value": 10
+        },
+        "hp": {
+          "value": 0,
+          "max": 0,
+          "dt": null,
+          "conditions": ""
+        },
+        "weaponType": "martialR",
+        "baseItem": "longbow",
+        "properties": {
+          "amm": true,
+          "hvy": true,
+          "two": true,
+          "fin": false,
+          "fir": false,
+          "foc": false,
+          "lgt": false,
+          "rch": false,
+          "rel": false,
+          "ret": false,
+          "spc": false,
+          "thr": false,
+          "ver": false,
+          "ada": false,
+          "lod": false,
+          "mgc": false,
+          "sil": false
+        },
+        "proficient": true
+      },
+      "ownership": {
+        "default": 0,
+        "hA7v9W22QTeoehXt": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "OBT5qwYOA9gBRBpc",
+      "name": "Quiver",
+      "type": "backpack",
+      "img": "https://assets.forge-vtt.com/bazaar/core/icons/containers/ammunition/arrows-quiver-black.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 2400001,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.dnd5e.items.4MtQKPn9qMWCFjDA"
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>A quiver can hold up to 20 arrows.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 153",
+        "quantity": 1,
+        "weight": 1,
+        "price": 1,
+        "attunement": 0,
+        "equipped": false,
+        "rarity": "common",
+        "identified": true,
+        "capacity": {
+          "type": "weight",
+          "value": 1,
+          "weightless": false
+        },
+        "currency": {
+          "cp": 0,
+          "sp": 0,
+          "ep": 0,
+          "gp": 0,
+          "pp": 0
+        },
+        "damage": {
+          "parts": []
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "0xyEXxozXVfBeLNC",
+      "name": "Bedroll",
+      "type": "loot",
+      "img": "https://assets.forge-vtt.com/bazaar/core/icons/sundries/flags/banner-worn-blue.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 300000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.dnd5e.items.DVXmyetZuvxbzAwW"
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>Roll of cloth used by traveller to sleep in.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 150",
+        "quantity": 1,
+        "weight": 7,
+        "price": 1,
+        "attunement": 0,
+        "equipped": false,
+        "rarity": "common",
+        "identified": true,
+        "damage": {
+          "parts": []
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "Hnr7eEm9LcfGI8sB",
+      "name": "Piton",
+      "type": "consumable",
+      "img": "https://assets.forge-vtt.com/bazaar/core/icons/sundries/survival/stake-rough-simple-brown.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 4300000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.dnd5e.items.TqyvIglHDj5kfohR"
+        },
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "quantity": false,
+              "use": true
+            },
+            "altValue": {
+              "quantity": false,
+              "use": true
+            }
+          }
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>A metal spike that is drive into a seam in a climbing surface with a climbing hammer. It can also be used like iron spikes to block doors in a pinch.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 150",
+        "quantity": 5,
+        "weight": 0.25,
+        "price": 0.05,
+        "attunement": 0,
+        "equipped": false,
+        "rarity": "common",
+        "identified": true,
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": 5,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": 1,
+          "max": "1",
+          "per": "charges",
+          "autoDestroy": false,
+          "autoUse": true
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "util",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "consumableType": "trinket"
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "CBQBVAYqs5aaRHVb",
+      "name": "Bloodstone",
+      "type": "loot",
+      "img": "https://assets.forge-vtt.com/5f384f3a51cf44b70e8dd982/RayGameAssets/jewelry/GemRed.png",
+      "effects": [],
+      "folder": null,
+      "sort": 200000,
+      "flags": {},
+      "system": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "dmg 134",
+        "quantity": 19,
+        "weight": 0.05,
+        "price": 50,
+        "attunement": 0,
+        "equipped": false,
+        "rarity": "",
+        "identified": true
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": "dnd5e",
+        "systemVersion": "2.0.2",
+        "coreVersion": "10.284",
+        "createdTime": null,
+        "modifiedTime": 1662776736629,
+        "lastModifiedBy": "QhGE8Z8VEcAK07yU"
+      }
+    },
+    {
+      "_id": "wsidK2xnp4X0ILyE",
+      "name": "Recharge psychic energy",
+      "type": "feat",
+      "img": "https://assets.forge-vtt.com/5f384f3a51cf44b70e8dd982/RayGameAssets/icons/grr.png",
+      "effects": [],
+      "folder": null,
+      "sort": 1300000,
+      "flags": {
+        "betterRolls5e": {
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickOther": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "resource": true
+            },
+            "altValue": {
+              "resource": true
+            }
+          }
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p><span style=\"color:#191813;font-size:13px\"> In addition, as a bonus action, you can regain one expended Psionic Energy die, but you can't do so again until you finish a short or long rest.</span></p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "tce 63",
+        "activation": {
+          "type": "bonus",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": ""
+        },
+        "consume": {
+          "type": "attribute",
+          "target": "resources.tertiary.value",
+          "amount": 1
+        },
+        "ability": null,
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "requirements": "Soulknife 3",
+        "recharge": {
+          "value": null,
+          "charged": false
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "O9o244o4Cd2KjMTj",
+      "name": "Antitoxin",
+      "type": "consumable",
+      "img": "icons/consumables/potions/bottle-round-corked-pink.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 100000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.dnd5e.items.Fc6UfFNOnW80XMzi"
+        },
+        "rsr5e": {
+          "quickDesc": {
+            "value": true
+          },
+          "quickFooter": {
+            "value": true
+          },
+          "consumeQuantity": {
+            "value": true
+          },
+          "consumeUses": {
+            "value": true
+          }
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>A creature that drinks this vial of liquid gains advantage on saving throws against poison for 1 hour. It confers no benefit to undead or constructs.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 151",
+        "quantity": 2,
+        "weight": 0.1,
+        "price": 50,
+        "attunement": 0,
+        "equipped": false,
+        "rarity": "common",
+        "identified": true,
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": 1,
+          "units": "hour"
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": "self"
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": 1,
+          "max": "1",
+          "per": "charges",
+          "autoDestroy": true,
+          "autoUse": true
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": null,
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "consumableType": "potion",
+        "attributes": {
+          "spelldc": 10
+        }
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": "dnd5e",
+        "systemVersion": "2.0.2",
+        "coreVersion": "10.284",
+        "createdTime": null,
+        "modifiedTime": 1663372382917,
+        "lastModifiedBy": "QhGE8Z8VEcAK07yU"
+      }
+    },
+    {
+      "_id": "Ew1sXPolN8zKRHmv",
+      "name": "Rations",
+      "type": "consumable",
+      "img": "icons/consumables/meat/hock-leg-pink-brown.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 1800000,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.dnd5e.items.f4w4GxBi0nYXmhX4"
+        },
+        "betterRolls5e": {
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "quantity": false,
+              "use": true
+            },
+            "altValue": {
+              "quantity": false,
+              "use": true
+            }
+          }
+        },
+        "rsr5e": {
+          "quickOther": {
+            "context": ""
+          },
+          "quickDesc": {
+            "value": true
+          },
+          "quickFooter": {
+            "value": true
+          },
+          "consumeQuantity": {
+            "value": true
+          },
+          "consumeUses": {
+            "value": true
+          }
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>Rations consist of dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 153",
+        "quantity": 3,
+        "weight": 2,
+        "price": 0.5,
+        "attunement": 0,
+        "equipped": false,
+        "rarity": "common",
+        "identified": true,
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": 0,
+          "units": ""
+        },
+        "target": {
+          "value": 1,
+          "width": null,
+          "units": "",
+          "type": "creature"
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "touch"
+        },
+        "uses": {
+          "value": 1,
+          "max": "1",
+          "per": "charges",
+          "autoDestroy": true,
+          "autoUse": true
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "util",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "consumableType": "food"
+      },
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": "dnd5e",
+        "systemVersion": "2.0.2",
+        "coreVersion": "10.284",
+        "createdTime": null,
+        "modifiedTime": 1662772870899,
+        "lastModifiedBy": "QhGE8Z8VEcAK07yU"
+      }
+    },
+    {
+      "_id": "mGRXxIKqLx93P9cu",
+      "name": "Gennik",
+      "type": "loot",
+      "img": "icons/commodities/gems/gem-rough-square-red.webp",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Item.O2KXI04Y0V15k2RN"
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>Common currency in Forgen trade, the genik is a chip of garnet roughly the size of a dwarven thumbnail.  They trade for 5GP each and are easy to carry.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "quantity": 6,
+        "weight": 0.02,
+        "price": 5,
+        "attunement": 0,
+        "equipped": false,
+        "rarity": "",
+        "identified": true
+      },
+      "ownership": {
+        "default": 0,
+        "nxYE0FsPdcQ3pshy": 3
+      },
+      "_stats": {
+        "systemId": null,
+        "systemVersion": null,
+        "coreVersion": null,
+        "createdTime": null,
+        "modifiedTime": null,
+        "lastModifiedBy": null
+      }
+    },
+    {
+      "_id": "7Zh012mitlTbv5jw",
+      "name": "Elven Estoc",
+      "type": "weapon",
+      "img": "https://assets.forge-vtt.com/bazaar/systems/dnd5e/assets/icons/items/weapons/sword-ice.jpg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.dnd5e.items.fbC0Mg1a73wdFbqO"
+        },
+        "betterRolls5e": {
+          "quickDamage": {
+            "context": {
+              "0": ""
+            },
+            "value": {
+              "0": true
+            },
+            "altValue": {
+              "0": true
+            }
+          },
+          "quickOther": {
+            "context": "",
+            "value": true,
+            "altValue": true
+          },
+          "quickDesc": {
+            "value": false,
+            "altValue": false
+          },
+          "quickAttack": {
+            "value": true,
+            "altValue": true
+          },
+          "quickProperties": {
+            "value": true,
+            "altValue": true
+          },
+          "quickVersatile": {
+            "value": false,
+            "altValue": false
+          },
+          "quickFlavor": {
+            "value": true,
+            "altValue": true
+          },
+          "quickCharges": {
+            "value": {
+              "quantity": false
+            },
+            "altValue": {
+              "quantity": false
+            }
+          }
+        },
+        "rsr5e": {
+          "quickDamage": {
+            "context": {
+              "0": ""
+            },
+            "value": {
+              "0": true
+            }
+          },
+          "quickOther": {
+            "context": ""
+          },
+          "quickDesc": {
+            "value": false
+          },
+          "quickFlavor": {
+            "value": true
+          },
+          "quickFooter": {
+            "value": true
+          },
+          "quickAttack": {
+            "value": true
+          },
+          "consumeQuantity": {
+            "value": false
+          }
+        }
+      },
+      "system": {
+        "description": {
+          "value": "<p>A thin bladed sword of elven design, its curving design is often refered to in Darian as a 'wave blade'.  Their construction allows for proper usage in water.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "IoK",
+        "quantity": 1,
+        "weight": 2,
+        "price": 35,
+        "attunement": 0,
+        "equipped": false,
+        "rarity": "common",
+        "identified": true,
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": 5,
+          "long": null,
+          "units": "ft"
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "mwak",
+        "attackBonus": "0",
+        "chatFlavor": "Works underwater",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "1d8 + @mod",
+              "slashing"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "armor": {
+          "value": 10
+        },
+        "hp": {
+          "value": 0,
+          "max": 0,
+          "dt": null,
+          "conditions": ""
+        },
+        "weaponType": "martialM",
+        "baseItem": "rapier",
+        "properties": {
+          "fin": true,
+          "lgt": false,
+          "ada": false,
+          "amm": false,
+          "fir": false,
+          "foc": false,
+          "hvy": false,
+          "lod": false,
+          "mgc": false,
+          "rch": false,
+          "rel": false,
+          "ret": false,
+          "sil": false,
+          "spc": false,
+          "thr": false,
+          "two": false,
+          "ver": false
+        },
+        "proficient": true
+      },
+      "ownership": {
+        "default": 0,
+        "nxYE0FsPdcQ3pshy": 3,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "_stats": {
+        "systemId": "dnd5e",
+        "systemVersion": "2.0.2",
+        "coreVersion": "10.284",
+        "createdTime": 1662772758509,
+        "modifiedTime": 1663369771302,
+        "lastModifiedBy": "QhGE8Z8VEcAK07yU"
+      }
+    },
+    {
+      "_id": "l7XoJZ04WRetmg0j",
+      "name": "Potion of Animal Friendship",
+      "type": "consumable",
+      "img": "https://assets.forge-vtt.com/bazaar/core/icons/consumables/potions/potion-bottle-corked-labeled-green.webp",
+      "system": {
+        "description": {
+          "value": "<p><em>Agitating this muddy liquid brings little bits into view: a fish scale, hummingbird tongue, a cat claw, or a squirrel hair.</em></p>\n<p>When you drink this potion, you can cast the @Compendium[dnd5e.spells.hDOENzjuj5WpLq7B]{Animal Friendship}  spell (save DC 13) for 1 hour at will.</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "DMG pg. 187",
+        "quantity": 1,
+        "weight": 0.1,
+        "price": 200,
+        "attunement": 0,
+        "equipped": false,
+        "rarity": "uncommon",
+        "identified": true,
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "condition": "Beast must have an Intelligence of 3 or lower."
+        },
+        "duration": {
+          "value": 1,
+          "units": "hour"
+        },
+        "target": {
+          "value": 1,
+          "width": null,
+          "units": "",
+          "type": "creature"
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": "touch"
+        },
+        "uses": {
+          "value": 1,
+          "max": 1,
+          "per": "charges",
+          "autoDestroy": true,
+          "autoUse": true
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "save",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "wis",
+          "dc": 13,
+          "scaling": "flat"
+        },
+        "consumableType": "potion",
+        "attributes": {
+          "spelldc": 10
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 1600000,
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.dnd5e.items.nXWevqtV6p484N59"
+        }
+      },
+      "_stats": {
+        "systemId": "dnd5e",
+        "systemVersion": "2.0.2",
+        "coreVersion": "10.284",
+        "createdTime": 1661787233862,
+        "modifiedTime": 1662777238622,
+        "lastModifiedBy": "QhGE8Z8VEcAK07yU"
+      }
+    },
+    {
+      "name": "Twin Ravens Signet Ring",
+      "type": "loot",
+      "img": "https://assets.forge-vtt.com/5f384f3a51cf44b70e8dd982/RayGameAssets/jewelry/ring-red.webp",
+      "system": {
+        "description": {
+          "value": "<p>This ring signifies that you have an account with the Twin Raven's Bank.</p><p></p><p>Below taken from IoK book and may change due to updates to 5e</p><p><strong><span style=\"font-family:'Times New Roman'\"><span style=\"font-size:12pt;font-family:'Times New Roman';color:#000000;background-color:transparent;font-weight:700;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap\">Twin Raven Bank</span></span></strong><span style=\"font-family:'Times New Roman'\"><span style=\"font-size:12pt;font-family:'Times New Roman';color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap\"> – The Twin Raven Bank has a branch in Tradetown, Sal, and Peltony.  Once a character has an account, they can extract funds from any of the three banks, regardless of which they used.  The fee for setting up an account is 5 GP and requires a name to be attached to the account.  The validity of this name is inconsequential, just so long as it is not a name taken by someone else.  Once funds are stored, the character can make withdrawals and deposits and can also write promissory notes to other members of the bank, which includes most merchants in Tradetown.  Promissory notes require the character to possess a Twin Raven notarized parchment and registered signet.  It is then recommended that the character purchase a signet ring in order to sign his notes.  The registered signet and signature are used to verify these notes and ensure a level of validity to the Twin Raven’s promissory notes.  If the Twin Raven suspects a forgery, they have a fully trained department of specialized tracks to hunt down the counterfeiters and deal with them as only a Merchant King can.  Normally this threat is enough to keep forgeries at a minimum.  The primary reason people use the Twin Raven bank is to prevent the personal responsibility of maintaining a large amount of currency.  Fifty gold darins weigh one pound, imagine receiving 5,000 GP when you sell that last shipment from Forgen.  One hundred pounds of gold coin makes you a big, slow target for would be thieves.  Even geniks would leave you with twenty pounds of money on your person.  The convenience of a promissory note cannot be appreciated until you try selling a caravel.  Also, once you get all those profits home, you now have the stress of trying to protect those riches.  The Twin Raven is fully equipped to deal with these problems.   </span></span></p><p><strong style=\"font-weight:normal\" id=\"docs-internal-guid-fee36fbe-7fff-8de1-6e6c-c2ae1760fa52\"><br /></strong></p><p dir=\"ltr\" style=\"line-height:1.2;margin-left:18pt;text-indent:-18pt;margin-top:0pt;margin-bottom:0pt;padding:0pt 0pt 0pt 18pt\"><span style=\"font-family:'Times New Roman'\"><span style=\"font-size:12pt;font-family:'Times New Roman';color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap\">Set up Twin Raven Account</span><span class=\"Apple-tab-span\" style=\"white-space:pre\"> </span><span style=\"font-size:12pt;font-family:'Times New Roman';color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap\">5 GP</span></span></p><p dir=\"ltr\" style=\"line-height:1.2;margin-left:18pt;text-indent:-18pt;margin-top:0pt;margin-bottom:0pt;padding:0pt 0pt 0pt 18pt\"><span style=\"font-family:'Times New Roman'\"><span style=\"font-size:12pt;font-family:'Times New Roman';color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap\">Withdrawal under 100 GP</span><span class=\"Apple-tab-span\" style=\"white-space:pre\"> </span><span style=\"font-size:12pt;font-family:'Times New Roman';color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap\">1 SP</span></span></p><p dir=\"ltr\" style=\"line-height:1.2;margin-left:18pt;text-indent:-18pt;margin-top:0pt;margin-bottom:0pt;padding:0pt 0pt 0pt 18pt\"><span style=\"font-family:'Times New Roman'\"><span style=\"font-size:12pt;font-family:'Times New Roman';color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap\">Withdrawal over 100 GP</span><span class=\"Apple-tab-span\" style=\"white-space:pre\"> </span><span style=\"font-size:12pt;font-family:'Times New Roman';color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap\">.1% of the withdrawal</span></span></p><p dir=\"ltr\" style=\"line-height:1.2;margin-left:18pt;text-indent:-18pt;margin-top:0pt;margin-bottom:0pt;padding:0pt 0pt 0pt 18pt\"><span style=\"font-family:'Times New Roman'\"><span style=\"font-size:12pt;font-family:'Times New Roman';color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap\">Deposit (currency or promissory note)</span><span class=\"Apple-tab-span\" style=\"white-space:pre\"> </span><span style=\"font-size:12pt;font-family:'Times New Roman';color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap\">Free</span></span></p><p dir=\"ltr\" style=\"line-height:1.2;margin-left:18pt;text-indent:-18pt;margin-top:0pt;margin-bottom:0pt;padding:0pt 0pt 0pt 18pt\"><span style=\"font-family:'Times New Roman'\"><span style=\"font-size:12pt;font-family:'Times New Roman';color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap\">Write a promissory note</span><span class=\"Apple-tab-span\" style=\"white-space:pre\"> </span><span style=\"font-size:12pt;font-family:'Times New Roman';color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap\">5 SP</span></span></p><p dir=\"ltr\" style=\"line-height:1.2;margin-left:18pt;text-indent:-18pt;margin-top:0pt;margin-bottom:0pt;padding:0pt 0pt 0pt 18pt\"><span style=\"font-family:'Times New Roman'\"><span style=\"font-size:12pt;font-family:'Times New Roman';color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap\">Currency exchange</span><span class=\"Apple-tab-span\" style=\"white-space:pre\"> </span><span style=\"font-size:12pt;font-family:'Times New Roman';color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap\">1%</span></span></p><p dir=\"ltr\" style=\"line-height:1.2;margin-left:18pt;text-indent:-18pt;margin-top:0pt;margin-bottom:0pt;padding:0pt 0pt 0pt 18pt\"><span style=\"font-family:'Times New Roman'\"><span style=\"font-size:12pt;font-family:'Times New Roman';color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap\">Gem appraisal</span><span class=\"Apple-tab-span\" style=\"white-space:pre\"> </span><span style=\"font-size:12pt;font-family:'Times New Roman';color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap\">5 SP</span></span></p><p dir=\"ltr\" style=\"line-height:1.2;margin-left:18pt;text-indent:-18pt;margin-top:0pt;margin-bottom:0pt;padding:0pt 0pt 0pt 18pt\"><span style=\"font-family:'Times New Roman'\"><span style=\"font-size:12pt;font-family:'Times New Roman';color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap\">Gem exchange</span><span class=\"Apple-tab-span\" style=\"white-space:pre\"> </span><span style=\"font-size:12pt;font-family:'Times New Roman';color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap\">1%</span></span></p><p dir=\"ltr\" style=\"line-height:1.2;margin-left:18pt;text-indent:-18pt;margin-top:0pt;margin-bottom:0pt;padding:0pt 0pt 0pt 18pt\"><span style=\"font-family:'Times New Roman'\"><span style=\"font-size:12pt;font-family:'Times New Roman';color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap\">Loan 10% annually</span></span></p><p dir=\"ltr\" style=\"line-height:1.2;margin-left:18pt;text-indent:-18pt;margin-top:0pt;margin-bottom:0pt;padding:0pt 0pt 0pt 18pt\"><span style=\"font-family:'Times New Roman'\"><span style=\"font-size:12pt;font-family:'Times New Roman';color:#000000;background-color:transparent;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap\">(compounded monthly, max amount depends on stature with community.  1,000 GP base plus DM determined modifier is a good base)</span></span></p><p><br class=\"Apple-interchange-newline\" /></p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "PHB pg. 153",
+        "quantity": 1,
+        "weight": 0,
+        "price": 5,
+        "attunement": 0,
+        "equipped": false,
+        "rarity": "common",
+        "identified": true,
+        "damage": {
+          "parts": []
+        }
+      },
+      "effects": [],
+      "folder": null,
+      "sort": 200000,
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "flags": {
+        "core": {
+          "sourceId": "Compendium.dnd5e.items.kdkpSZMUHGXGM15H"
+        }
+      },
+      "_stats": {
+        "systemId": "dnd5e",
+        "systemVersion": "2.0.2",
+        "coreVersion": "10.284",
+        "createdTime": 1661787233838,
+        "modifiedTime": 1662777613373,
+        "lastModifiedBy": "QhGE8Z8VEcAK07yU"
+      },
+      "_id": "7sHXOIaPmwC90r9y"
+    },
+    {
+      "name": "copper ring",
+      "type": "loot",
+      "system": {
+        "description": {
+          "value": "<p>Found on body in wyvern caves.</p><p>Dwarven Sigil on it, family Sigil of some kind</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "quantity": 1,
+        "weight": 0,
+        "price": 0,
+        "attunement": 0,
+        "equipped": false,
+        "rarity": "",
+        "identified": true
+      },
+      "_id": "U1Ou72LdVrAjBYUN",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "flags": {},
+      "_stats": {
+        "systemId": "dnd5e",
+        "systemVersion": "2.0.2",
+        "coreVersion": "10.284",
+        "createdTime": 1663373136145,
+        "modifiedTime": 1663380214783,
+        "lastModifiedBy": "QhGE8Z8VEcAK07yU"
+      }
+    },
+    {
+      "name": "Psychic Energy",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "action",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": ""
+        },
+        "consume": {
+          "type": "",
+          "target": "",
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "other",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "1d8",
+              ""
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false
+        }
+      },
+      "_id": "tZQrKGGi8jGtKkRK",
+      "img": "https://assets.forge-vtt.com/5f384f3a51cf44b70e8dd982/RayGameAssets/icons/grr.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "flags": {
+        "rsr5e": {
+          "quickDesc": {
+            "value": true
+          },
+          "quickFooter": {
+            "value": true
+          },
+          "quickOther": {
+            "context": ""
+          },
+          "quickDamage": {
+            "context": {
+              "0": ""
+            },
+            "value": {
+              "0": true
+            }
+          },
+          "consumeResource": {
+            "value": true
+          }
+        }
+      },
+      "_stats": {
+        "systemId": "dnd5e",
+        "systemVersion": "2.0.2",
+        "coreVersion": "10.284",
+        "createdTime": 1663380841469,
+        "modifiedTime": 1663973655616,
+        "lastModifiedBy": "QhGE8Z8VEcAK07yU"
+      }
+    },
+    {
+      "name": "Goodberry",
+      "type": "consumable",
+      "system": {
+        "description": {
+          "value": "<p>Provided by Tegus</p>",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "quantity": 1,
+        "weight": 0,
+        "price": 0,
+        "attunement": 0,
+        "equipped": false,
+        "rarity": "",
+        "identified": true,
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null,
+          "autoDestroy": false
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": "",
+        "actionType": "heal",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [
+            [
+              "4",
+              "healing"
+            ]
+          ],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "consumableType": "potion"
+      },
+      "img": "https://assets.forge-vtt.com/5f384f3a51cf44b70e8dd982/RayGameAssets/equipment/tavernIcons-10-06.png",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "QhGE8Z8VEcAK07yU": 3
+      },
+      "flags": {
+        "rsr5e": {
+          "quickDesc": {
+            "value": true
+          },
+          "quickFooter": {
+            "value": true
+          },
+          "consumeQuantity": {
+            "value": true
+          },
+          "quickOther": {
+            "context": ""
+          },
+          "quickDamage": {
+            "context": {
+              "0": ""
+            },
+            "value": {
+              "0": true
+            }
+          }
+        },
+        "core": {
+          "sourceId": "Actor.jtBfdAShIuJvMPRy.Item.iPW3d7hsggpyma0Q"
+        }
+      },
+      "_stats": {
+        "systemId": "dnd5e",
+        "systemVersion": "2.0.2",
+        "coreVersion": "10.284",
+        "createdTime": 1662774671459,
+        "modifiedTime": 1663987657023,
+        "lastModifiedBy": "QhGE8Z8VEcAK07yU"
+      },
+      "_id": "I7bplcC5GHNfYTT6"
+    },
+    {
+      "name": "Broken Rib - 11 July",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "",
+          "chat": "",
+          "unidentified": ""
+        },
+        "source": "",
+        "activation": {
+          "type": "",
+          "cost": 0,
+          "condition": ""
+        },
+        "duration": {
+          "value": null,
+          "units": ""
+        },
+        "target": {
+          "value": null,
+          "width": null,
+          "units": "",
+          "type": ""
+        },
+        "range": {
+          "value": null,
+          "long": null,
+          "units": ""
+        },
+        "uses": {
+          "value": null,
+          "max": "",
+          "per": null
+        },
+        "consume": {
+          "type": "",
+          "target": null,
+          "amount": null
+        },
+        "ability": null,
+        "actionType": "",
+        "attackBonus": 0,
+        "chatFlavor": "",
+        "critical": {
+          "threshold": null,
+          "damage": ""
+        },
+        "damage": {
+          "parts": [],
+          "versatile": ""
+        },
+        "formula": "",
+        "save": {
+          "ability": "",
+          "dc": null,
+          "scaling": "spell"
+        },
+        "requirements": "",
+        "recharge": {
+          "value": null,
+          "charged": false
+        }
+      },
+      "_id": "CxLU0IVE0uX4j9CB",
+      "img": "icons/svg/item-bag.svg",
+      "effects": [],
+      "folder": null,
+      "sort": 0,
+      "ownership": {
+        "default": 0,
+        "nxYE0FsPdcQ3pshy": 3
+      },
+      "flags": {
+        "rsr5e": {
+          "quickDesc": {
+            "value": true
+          },
+          "quickFooter": {
+            "value": true
+          }
+        },
+        "core": {
+          "sourceId": "Actor.qIZZuLYzpKZ9iueG.Item.ORZlnPw9GcdUU6iN"
+        }
+      },
+      "_stats": {
+        "systemId": "dnd5e",
+        "systemVersion": "2.0.2",
+        "coreVersion": "10.284",
+        "createdTime": 1663376786536,
+        "modifiedTime": 1663988246019,
+        "lastModifiedBy": "nxYE0FsPdcQ3pshy"
+      }
+    }
+  ],
+  "effects": [
+    {
+      "label": "Bleeding",
+      "icon": "icons/svg/blood.svg",
+      "flags": {
+        "core": {
+          "statusId": "bleeding"
+        }
+      },
+      "_id": "ousIlo0tAXmUd1IT",
+      "changes": [],
+      "disabled": false,
+      "duration": {
+        "startTime": 10051722456,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": 10,
+        "startTurn": 9
+      },
+      "origin": null,
+      "tint": null,
+      "transfer": false
+    },
+    {
+      "label": "Broken ribs",
+      "icon": "icons/svg/aura.svg",
+      "origin": "Actor.jtBfdAShIuJvMPRy",
+      "duration": {
+        "rounds": 1,
+        "startTime": 10051722462,
+        "seconds": null,
+        "combat": null,
+        "turns": null,
+        "startRound": 11,
+        "startTurn": 1
+      },
+      "disabled": false,
+      "_id": "XGsK2CQq1ufvWfc5",
+      "changes": [
+        {
+          "key": "",
+          "mode": 2,
+          "value": "",
+          "priority": null
+        }
+      ],
+      "tint": null,
+      "transfer": false,
+      "flags": {}
+    }
+  ],
+  "flags": {
+    "exportSource": {
+      "world": "iok5enov2022",
+      "system": "dnd5e",
+      "coreVersion": "10.284",
+      "systemVersion": "2.0.2"
+    },
+    "downtime-ethck": {
+      "trainingItems": [],
+      "changes": []
+    },
+    "scene-packer": {
+      "sourceId": "Actor.QgPZ2J7vuhdEypNL"
+    },
+    "dnd5e": {}
+  },
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 12,
+        "proficient": 0,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "dex": {
+        "value": 17,
+        "proficient": 1,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "con": {
+        "value": 14,
+        "proficient": 0,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "int": {
+        "value": 12,
+        "proficient": 1,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "wis": {
+        "value": 10,
+        "proficient": 0,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      },
+      "cha": {
+        "value": 10,
+        "proficient": 0,
+        "bonuses": {
+          "check": "",
+          "save": ""
+        }
+      }
+    },
+    "attributes": {
+      "ac": {
+        "flat": null,
+        "calc": "default",
+        "formula": ""
+      },
+      "hp": {
+        "value": 34,
+        "min": 0,
+        "max": 52,
+        "temp": null,
+        "tempmax": null
+      },
+      "init": {
+        "value": 0,
+        "bonus": 0
+      },
+      "movement": {
+        "burrow": 0,
+        "climb": 0,
+        "fly": 0,
+        "swim": 0,
+        "walk": 30,
+        "units": "ft",
+        "hover": false
+      },
+      "attunement": {
+        "max": 3
+      },
+      "senses": {
+        "darkvision": 60,
+        "blindsight": 0,
+        "tremorsense": 0,
+        "truesight": 0,
+        "units": "ft",
+        "special": ""
+      },
+      "spellcasting": "int",
+      "death": {
+        "success": 0,
+        "failure": 0
+      },
+      "exhaustion": 0,
+      "inspiration": false
+    },
+    "details": {
+      "biography": {
+        "value": "<p>Carrier has been sunk by the Gistasch and Sarule is one of the few remaining elves from the carrier. For 3 years he has been hanging with these folks as he's been cut off from his own kind.</p><section class=\"secret\" id=\"secret-ccrYhHHpTfIDbzC0\"><p>Has a contact through his house where if the humans learn something about the Evolution shards and don't share it then Sarule can back-channel the information </p><p>through that contact.  The idea is that he is to stay deep undercover and should only break that if Evolution shard is found and the location is being kept from the Darmic, or some other similarly high priority issue.</p></section><p></p><p>Mind syphon user.</p><p></p><p>Broken ribs as of july 13 319, dc con 10 to do an action</p>",
+        "public": ""
+      },
+      "alignment": "NN",
+      "race": "Dramic",
+      "background": "Sailor",
+      "originalClass": "0V94cOTT8gU0TzXS",
+      "xp": {
+        "value": 29506,
+        "min": 0,
+        "max": 300
+      },
+      "appearance": "80 years old\n95 lbs\n5'8\"",
+      "trait": "",
+      "ideal": "",
+      "bond": "",
+      "flaw": ""
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [
+          "darian",
+          "dramic",
+          "hobok"
+        ],
+        "custom": "Thieve's cant"
+      },
+      "weaponProf": {
+        "value": [
+          "sim",
+          "handcrossbow",
+          "longbow",
+          "longsword",
+          "rapier",
+          "shortsword"
+        ],
+        "custom": ""
+      },
+      "armorProf": {
+        "value": [
+          "lgt"
+        ],
+        "custom": ""
+      },
+      "toolProf": {
+        "value": [
+          "navg",
+          "thief",
+          "water"
+        ],
+        "custom": ""
+      }
+    },
+    "currency": {
+      "pp": null,
+      "gp": 22,
+      "ep": 0,
+      "sp": 0,
+      "cp": 0
+    },
+    "skills": {
+      "acr": {
+        "value": 0,
+        "ability": "dex",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        }
+      },
+      "ani": {
+        "value": 1,
+        "ability": "wis",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        }
+      },
+      "arc": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        }
+      },
+      "ath": {
+        "value": 0,
+        "ability": "str",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        }
+      },
+      "dec": {
+        "value": 1,
+        "ability": "cha",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        }
+      },
+      "his": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        }
+      },
+      "ins": {
+        "value": 1,
+        "ability": "wis",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        }
+      },
+      "itm": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        }
+      },
+      "inv": {
+        "value": 1,
+        "ability": "int",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        }
+      },
+      "med": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        }
+      },
+      "nat": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        }
+      },
+      "prc": {
+        "value": 2,
+        "ability": "wis",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        }
+      },
+      "prf": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        }
+      },
+      "per": {
+        "value": 0,
+        "ability": "cha",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        }
+      },
+      "rel": {
+        "value": 0,
+        "ability": "int",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        }
+      },
+      "slt": {
+        "value": 2,
+        "ability": "dex",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        }
+      },
+      "ste": {
+        "value": 2,
+        "ability": "dex",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        }
+      },
+      "sur": {
+        "value": 0,
+        "ability": "wis",
+        "bonuses": {
+          "check": "",
+          "passive": ""
+        }
+      }
+    },
+    "spells": {
+      "spell1": {
+        "value": 0,
+        "override": null
+      },
+      "spell2": {
+        "value": 0,
+        "override": null
+      },
+      "spell3": {
+        "value": 0,
+        "override": null
+      },
+      "spell4": {
+        "value": 0,
+        "override": null
+      },
+      "spell5": {
+        "value": 0,
+        "override": null
+      },
+      "spell6": {
+        "value": 0,
+        "override": null
+      },
+      "spell7": {
+        "value": 0,
+        "override": null
+      },
+      "spell8": {
+        "value": 0,
+        "override": null
+      },
+      "spell9": {
+        "value": 0,
+        "override": null
+      },
+      "pact": {
+        "value": 0,
+        "override": null
+      }
+    },
+    "bonuses": {
+      "mwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rwak": {
+        "attack": "",
+        "damage": ""
+      },
+      "msak": {
+        "attack": "",
+        "damage": ""
+      },
+      "rsak": {
+        "attack": "",
+        "damage": ""
+      },
+      "abilities": {
+        "check": "",
+        "save": "",
+        "skill": ""
+      },
+      "spell": {
+        "dc": ""
+      }
+    },
+    "resources": {
+      "primary": {
+        "value": 6,
+        "max": 6,
+        "sr": false,
+        "lr": true,
+        "label": "psionic energy"
+      },
+      "secondary": {
+        "value": null,
+        "max": 1,
+        "sr": false,
+        "lr": true,
+        "label": "Psychic Whispers"
+      },
+      "tertiary": {
+        "value": 1,
+        "max": 1,
+        "sr": true,
+        "lr": true,
+        "label": "psionic energy recharge"
+      }
+    }
+  },
+  "prototypeToken": {
+    "name": "Sarule",
+    "displayName": 50,
+    "actorLink": true,
+    "width": 1,
+    "height": 1,
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false,
+        "type": null
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "color": null,
+      "attenuation": 0.5
+    },
+    "disposition": 1,
+    "displayBars": 50,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "flags": {},
+    "randomImg": false,
+    "texture": {
+      "src": "https://assets.forge-vtt.com/5f405e88575d34872f40d327/IoK%20Creatures/elf6.png",
+      "tint": null,
+      "scaleX": 1,
+      "scaleY": 1,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0
+    },
+    "sight": {
+      "angle": 360,
+      "enabled": true,
+      "range": 60,
+      "brightness": 0,
+      "visionMode": "basic",
+      "color": null,
+      "attenuation": 0.1,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "detectionModes": []
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.0.2",
+    "coreVersion": "10.284",
+    "createdTime": null,
+    "modifiedTime": 1664046500371,
+    "lastModifiedBy": "QhGE8Z8VEcAK07yU"
+  }
+}
