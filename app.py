@@ -181,7 +181,7 @@ def index():
     return apology("TODO")
 
 
-@app.route("/resetpw", methods=["POST"])
+@app.route("/resetpw", methods=["GET", "POST"])
 def resetpw():
     """Page to reset password if forgotten"""
     if request.method == "POST":
