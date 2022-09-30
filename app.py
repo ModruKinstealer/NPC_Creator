@@ -189,11 +189,11 @@ def resetpw():
         if not request.form.get("username") and not request.form.get("email"):
             return apology("To Reset the pw we need either the user name or the email address.")
         # Need to confirm that the user name or email entered are in the db
-        namerows = db.execute("SELECT * FROM users WHERE name = ?", request.form.get("username"))  
-        emailrows = db.execute("SELECT * FROM users WHERE email = ?", request.form.get("email")) 
+        namerows = db.execute("SELECT * FROM users WHERE name = ?", request.form.get("username"))
+        emailrows = db.execute("SELECT * FROM users WHERE email = ?", request.form.get("email"))
         if len(namerows) != 1 and len(emailrows) != 1:
             return apology("Account not found. Try again or register for an account.")
-        
+
         elif not request.form.get("username") and len(emailrows) == 1:
             # Get challenges from users table
             challengesjson = db.execute("SELECT challenges FROM users WHERE email=?", request.form.get("email"))
