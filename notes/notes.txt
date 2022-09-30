@@ -3,3 +3,7 @@ python json library
     https://www.w3schools.com/python/python_json.asp
 
     Use that instead of SQL since Foundry uses Json already?
+
+
+turn flask's debug mode on paste into prompt.
+export FLASK_DEBUG=ON
