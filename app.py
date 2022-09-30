@@ -197,8 +197,10 @@ def resetpw():
         elif not request.form.get("username") and len(emailrows) == 1:
             # Get challenges from users table
             challengesjson = db.execute("SELECT challenges FROM users WHERE email=?", request.form.get("email"))
+            # Pull our dict out of the list of dicts our query created
+            ch = challengesjson[0]
             # Convert from Json to dict
-            challenges = json.loads(challengesjson)
+            challenges = json.loads(ch["challenges"])
             # Trying to mitigate security risks by only sending the keys, I only want the server to pull the values.
             keys = challenges.keys()
             name = db.execute("SELECT name FROM users WHERE email=?", request.form.get("email"))
@@ -206,13 +208,14 @@ def resetpw():
         else:
             # Get challenges from users table
             challengesjson = db.execute("SELECT challenges FROM users WHERE name=?", request.form.get("username"))
+            # Pull our dict out of the list of dicts our query created
+            ch = challengesjson[0]
             # Convert from Json to dict
-            challenges = json.loads(challengesjson)
+            challenges = json.loads(ch["challenges"])
             # Trying to mitigate security risks by only sending the keys, I only want the server to pull the values.
             keys = challenges.keys()
             email = db.execute("SELECT email FROM users WHERE name=?", request.form.get("username"))
             render_template("resetpwchallenge.html", keys=keys, email=email[0]["email"], name=request.form.get("username"))
-
     return render_template("resetpw.html")
 
 @app.route("/resetpwchallenge", methods=["POST"])
