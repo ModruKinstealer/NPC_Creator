@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Password reset
+{% endblock %}
+
+{% block main %}
+    <h2>Account found. Choose a challenge from the drop down and enter in the answer for it.</h2>
+    <form action="/resetpwchallenge" method="post">
+        <!-- To DO -->
+        <!-- List username and email of the account found from resetpw info -->
+        <input disabled id="username" name="username" type="text" value="{{ name }}">
+        <input disabled id="email" name="email" type="text" value="{{ email }}">
+        <!-- Drop down with the 3 challenges chosen at registration. Then a field to enter answer and submit button -->
+        <select autofocus name="challenge" class="mb-3">
+            <option disabled selected></option>
+            {% for key in keys %}
+            <option value="{{ key }}">{{ key }}</option>
+            {% endfor %}
+        </select>
+        <input id="answer" name="answer" placeholder="answer" type="text">
+        <button class="btn btn-primary" type="submit">Validate</button>
+    </form>
+{% endblock %}

@@ -12,12 +12,6 @@
         <!-- Inputs for username and email fields -->
         <input autocomplete="off" id="username" name="username" placeholder="johnsmith01" type="text">
         <input autocomplete="off" id="email" name="email" placeholder="johnsmith@email.com" type="email">
-        <select autofocus name="challenge" class="mb-3">
-            <option disabled selected></option>
-            {% for symbol in qtyOver1 %}
-            <option value="{{ symbol.symbol }}">{{ symbol.symbol }}, {{ symbol.price }},  qty {{ symbol.qty }}</option>
-            {% endfor %}
-        </select>
-        <button class="btn btn-primary" type="submit">Reset</button>
+        <button class="btn btn-primary" type="submit">Check for Account</button>
     </form>
 {% endblock %}

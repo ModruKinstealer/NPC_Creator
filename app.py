@@ -183,7 +183,7 @@ def index():
 
 @app.route("/resetpw", methods=["GET", "POST"])
 def resetpw():
-    """Page to reset password if forgotten"""
+    """Page to reset password if forgotten, first step locate account"""
     if request.method == "POST":
         # Either the user name field or the email field must be filled in
         if not request.form.get("username") and not request.form.get("email"):
@@ -199,11 +199,45 @@ def resetpw():
             challengesjson = db.execute("SELECT challenges FROM users WHERE email=?", request.form.get("email"))
             # Convert from Json to dict
             challenges = json.loads(challengesjson)
+            # Trying to mitigate security risks by only sending the keys, I only want the server to pull the values.
+            keys = challenges.keys()
+            name = db.execute("SELECT name FROM users WHERE email=?", request.form.get("email"))
+            render_template("resetpwchallenge.html", keys=keys, name=name[0]["name"], email=request.form.get("email"))
+        else:
+            # Get challenges from users table
+            challengesjson = db.execute("SELECT challenges FROM users WHERE name=?", request.form.get("username"))
+            # Convert from Json to dict
+            challenges = json.loads(challengesjson)
+            # Trying to mitigate security risks by only sending the keys, I only want the server to pull the values.
+            keys = challenges.keys()
+            email = db.execute("SELECT email FROM users WHERE name=?", request.form.get("username"))
+            render_template("resetpwchallenge.html", keys=keys, email=email[0]["email"], name=request.form.get("username"))
+
+    return render_template("resetpw.html")
+
+@app.route("/resetpwchallenge", methods=["POST"])
+def resetpwchallenge():
+    """Page to reset password if forgotten, step2 verify challenge question"""
+    if request.method == "POST":
+        # Either the user name field or the email field must be filled in
+        if not request.form.get("username") and not request.form.get("email"):
+            return apology("To Reset the pw we need either the user name or the email address.")
+        # Need to confirm that the user name or email entered are in the db
+        namerows = db.execute("SELECT * FROM users WHERE name = ?", request.form.get("username"))
+        emailrows = db.execute("SELECT * FROM users WHERE email = ?", request.form.get("email"))
+        if len(namerows) != 1 and len(emailrows) != 1:
+            return apology("Account not found. Try again or register for an account.")
+
+        elif not request.form.get("username") and len(emailrows) == 1:
+            # Get challenges from users table
+            challengesjson = db.execute("SELECT challenges FROM users WHERE email=?", request.form.get("email"))
+            # Convert from Json to dict
+            challenges = json.loads(challengesjson)
+            name = db
             render_template("resetpw.html", challenges=challenges)
             # Need second page to load?
 
     return render_template("resetpw.html")
-
 
 @app.route("/importExport", methods=["GET", "POST"])
 @login_required
