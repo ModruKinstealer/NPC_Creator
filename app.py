@@ -222,23 +222,21 @@ def resetpw():
 def resetpwchallenge():
     """Page to reset password if forgotten, step2 verify challenge question"""
     if request.method == "POST":
-        # Either the user name field or the email field must be filled in
-        if not request.form.get("username") and not request.form.get("email"):
-            return apology("To Reset the pw we need either the user name or the email address.")
-        # Need to confirm that the user name or email entered are in the db
-        namerows = db.execute("SELECT * FROM users WHERE name = ?", request.form.get("username"))
-        emailrows = db.execute("SELECT * FROM users WHERE email = ?", request.form.get("email"))
-        if len(namerows) != 1 and len(emailrows) != 1:
-            return apology("Account not found. Try again or register for an account.")
+        # Get name from db and confirm the email address matches it, in case someone modified it and tried to submit with false info or something
+        email = db.execute("SELECT email FROM users WHERE name=?", request.form.get("username"))
+        name = db.execute("SELECT name FROM users WHERE email=?", request.form.get("email"))
+        # Get the challenges from Db
+        challenges = db.execute("SELECT challenges FROM users WHERE name=?", request.form.get("username"))
+        # It's stored as a list of dicts, pulling the first dict out
+        ch = challenges[0]
 
-        elif not request.form.get("username") and len(emailrows) == 1:
-            # Get challenges from users table
-            challengesjson = db.execute("SELECT challenges FROM users WHERE email=?", request.form.get("email"))
-            # Convert from Json to dict
-            challenges = json.loads(challengesjson)
-            name = db
-            render_template("resetpw.html", challenges=challenges)
-            # Need second page to load?
+        # Since I filled in this page's username and email from my POST from resetpw if either of these fields are blank shenanigans may have happened.
+        if not request.form.get("username") or not request.form.get("email"):
+            return apology("To Reset the pw we need either the user name or the email address.")
+        # Making sure that the user name and email submitted match what I think they should, again in case of shenanigans
+        elif request.form.get("username") != name or request.form.get("email") != email:
+            return apology("Username and emails don't match our records.")
+        # **more stuff goes here**
 
     return render_template("resetpw.html")
 
