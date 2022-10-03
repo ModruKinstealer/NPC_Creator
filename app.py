@@ -210,6 +210,7 @@ def resetpw():
             return render_template("resetpwchallenge.html", keys=keys, email=email[0]["email"], name=request.form.get("username"))
     return render_template("resetpw.html")
 
+
 @app.route("/resetpwchallenge", methods=["POST"])
 def resetpwchallenge():
     """Page to reset password if forgotten, step2 verify challenge question"""
@@ -249,15 +250,13 @@ def resetpwchallenge():
 
     return render_template("resetpw.html")
 
-    
+
 ## Everything below this needs to be completed
 @app.route("/")
 @login_required
 def index():
     """main page with character sheet"""
     return apology("TODO")
-
-
 
 
 @app.route("/importExport", methods=["GET", "POST"])
