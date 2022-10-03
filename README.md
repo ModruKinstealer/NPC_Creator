@@ -23,6 +23,9 @@ As a new DM I found that often pre-made monsters or NPCs in my D&amp;D 5e game w
 - If possible, the ability to drag and drop a token file to directly input creature stats.  For Foundry this will be possibly to drag from compendiums. Importing from json files is also available, converting from files exported from other VTTs therefor should just be reliant upon being able to get them into a json format. 
 - The ability for each user to set what they want for default stats, or stat generation, for new creatures. 
 - The ability for a DM to determine which abilities the creature uses for calculation of CR, for those instances when they know that they want to use a different set of abilities than what is defaulted to for an encounter so they can tailor the CR more effectively to a particular encounter should they choose. 
+- Admin page to modify access level
+    Users
+    sources default access level
 
 # Files and their purposes
 -app.py, requirements.txt, helpers.py
@@ -31,6 +34,8 @@ As a new DM I found that often pre-made monsters or NPCs in my D&amp;D 5e game w
     - Main database for the site. Will have tables for users, spells, features, monsters, races, equipment, backgrounds, skills, and languages at a minimum.
     - I may create additional tables that are for home brewed content for each of those as well, it'll depend on what I think would be easier to maintain and use going forward
     - I considered using Json files rather than a DB but I'd guess there's at least a thousand spells, and a couple thousand monsters, plus everything else I thought that a SQL db would be the better long term choice since there's no telling how many users will use it and therefor how many thousands of new entries will get created going forward
+-helpers.py
+    - Houses the helper functions created to make repetitive tasks easier. Login_required and apology were stolen from pset9 Finance distributed code. randompc was defined by me. In the future I  may take advantage of a library for managing passwords, password resets, two factor authentication etc. But they are a little more robust than I need for this site since there isn't any financial data or any data similar.  Two factor authentication is overkill for the site as intended in my opinion but I may put the option in later for those who wish it. Eventually I'll probably add a user settings page which will have the option to have the temp password emailed to the email address linked to the account, I'll probably throw 2 factor auth in that feature as well while I'm in there.
 
 
 
