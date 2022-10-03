@@ -1,4 +1,6 @@
 # Home of any helper functions
+import string
+import random
 
 from flask import redirect, render_template, request, session
 from functools import wraps
@@ -31,3 +33,10 @@ def login_required(f):
             return redirect("/login")
         return f(*args, **kwargs)
     return decorated_function
+
+def randompw():
+    pool = string.ascii_lowercase + string.digits
+    pw = ''
+    for i in range(8):
+        pw += random.choice(pool)
+    return pw
