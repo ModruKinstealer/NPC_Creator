@@ -172,13 +172,6 @@ def password():
     else:
         return render_template("password.html")
 
-## Everything below this needs to be completed
-@app.route("/")
-@login_required
-def index():
-    """main page with character sheet"""
-    return apology("TODO")
-
 
 @app.route("/resetpw", methods=["GET", "POST"])
 def resetpw():
@@ -245,17 +238,27 @@ def resetpwchallenge():
             # Challenge answered correctly so set pw to random pw and send user to password change screen
             pw = randompw()
 
-            # Update DB with new password
+            # Hash random pw
             hash = generate_password_hash(pw, method='sha256', salt_length=16)
-            # Insert inputs into users db
+            # Update DB with new password
             db.execute("UPDATE users SET pwhash=? WHERE name IS ?", hash, request.form.get("username"))
-            # Set user's pw to randomly generated pw
-            db.execute("")
-            print(pw)
 
-        # **more stuff goes here**
+            # Notify user pw has been reset.
+            flash('Password reset to ' + pw + ' Please note this password. You can reset it via the Change Password page upon log in.')
+            return render_template("login.html")
 
     return render_template("resetpw.html")
+
+    
+## Everything below this needs to be completed
+@app.route("/")
+@login_required
+def index():
+    """main page with character sheet"""
+    return apology("TODO")
+
+
+
 
 @app.route("/importExport", methods=["GET", "POST"])
 @login_required
