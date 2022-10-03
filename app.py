@@ -6,7 +6,7 @@ from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
-from helpers import apology, login_required
+from helpers import apology, login_required, randompw
 
 # Configure application
 app = Flask(__name__)
@@ -172,7 +172,6 @@ def password():
     else:
         return render_template("password.html")
 
-
 ## Everything below this needs to be completed
 @app.route("/")
 @login_required
@@ -204,7 +203,7 @@ def resetpw():
             # Trying to mitigate security risks by only sending the keys, I only want the server to pull the values.
             keys = challenges.keys()
             name = db.execute("SELECT name FROM users WHERE email=?", request.form.get("email"))
-            render_template("resetpwchallenge.html", keys=keys, name=name[0]["name"], email=request.form.get("email"))
+            return render_template("resetpwchallenge.html", keys=keys, name=name[0]["name"], email=request.form.get("email"))
         else:
             # Get challenges from users table
             challengesjson = db.execute("SELECT challenges FROM users WHERE name=?", request.form.get("username"))
@@ -215,7 +214,7 @@ def resetpw():
             # Trying to mitigate security risks by only sending the keys, I only want the server to pull the values.
             keys = challenges.keys()
             email = db.execute("SELECT email FROM users WHERE name=?", request.form.get("username"))
-            render_template("resetpwchallenge.html", keys=keys, email=email[0]["email"], name=request.form.get("username"))
+            return render_template("resetpwchallenge.html", keys=keys, email=email[0]["email"], name=request.form.get("username"))
     return render_template("resetpw.html")
 
 @app.route("/resetpwchallenge", methods=["POST"])
@@ -225,17 +224,35 @@ def resetpwchallenge():
         # Get name from db and confirm the email address matches it, in case someone modified it and tried to submit with false info or something
         email = db.execute("SELECT email FROM users WHERE name=?", request.form.get("username"))
         name = db.execute("SELECT name FROM users WHERE email=?", request.form.get("email"))
+        name = name[0]["name"]
+        email = email[0]["email"]
         # Get the challenges from Db
         challenges = db.execute("SELECT challenges FROM users WHERE name=?", request.form.get("username"))
         # It's stored as a list of dicts, pulling the first dict out
-        ch = challenges[0]
-
+        ch = challenges[0]["challenges"]
+        ch = json.loads(ch)
         # Since I filled in this page's username and email from my POST from resetpw if either of these fields are blank shenanigans may have happened.
         if not request.form.get("username") or not request.form.get("email"):
             return apology("To Reset the pw we need either the user name or the email address.")
         # Making sure that the user name and email submitted match what I think they should, again in case of shenanigans
         elif request.form.get("username") != name or request.form.get("email") != email:
             return apology("Username and emails don't match our records.")
+
+        # Check if the chosen challenge question's stored answer is the same as what they typed in for the answer
+        if ch[request.form.get("challenge")] != request.form.get("answer"):
+            return apology("Sorry the answer was incorrect.")
+        else:
+            # Challenge answered correctly so set pw to random pw and send user to password change screen
+            pw = randompw()
+
+            # Update DB with new password
+            hash = generate_password_hash(pw, method='sha256', salt_length=16)
+            # Insert inputs into users db
+            db.execute("UPDATE users SET pwhash=? WHERE name IS ?", hash, request.form.get("username"))
+            # Set user's pw to randomly generated pw
+            db.execute("")
+            print(pw)
+
         # **more stuff goes here**
 
     return render_template("resetpw.html")
@@ -246,13 +263,11 @@ def importExport():
     """Page to import or export characters"""
     return apology("TODO")
 
-
 @app.route("/spells", methods=["GET", "POST"])
 @login_required
 def spells():
     """Page to Create, import, and or export spells"""
     return apology("TODO")
-
 
 @app.route("/monsters", methods=["GET", "POST"])
 @login_required
@@ -260,13 +275,11 @@ def monsters():
     """Page to Create, import, and or export monsters"""
     return apology("TODO")
 
-
 @app.route("/feats", methods=["GET", "POST"])
 @login_required
 def feats():
     """Page to Create, import, and or export feats"""
     return apology("TODO")
-
 
 @app.route("/features", methods=["GET", "POST"])
 @login_required
@@ -274,13 +287,11 @@ def features():
     """Page to Create, import, and or export features and abilities"""
     return apology("TODO")
 
-
 @app.route("/races", methods=["GET", "POST"])
 @login_required
 def races():
     """Page to Create, import, and or export races"""
     return apology("TODO")
-
 
 @app.route("/equipment", methods=["GET", "POST"])
 @login_required
@@ -288,13 +299,11 @@ def equipment():
     """Page to Create, import, and or export equipment"""
     return apology("TODO")
 
-
 @app.route("/skills", methods=["GET", "POST"])
 @login_required
 def skills():
     """Page to Create, import, and or export spells"""
     return apology("TODO")
-
 
 @app.route("/languages", methods=["GET", "POST"])
 @login_required
