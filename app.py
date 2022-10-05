@@ -269,8 +269,9 @@ def importExport():
 @login_required
 def spells():
     """Page to Create, import, and or export spells"""
-    # Get a list of column names for spells table, input table name, get back a list of names, empty list if no rows in db.
+    # Get a list of column names for SQL table, input table name, get back a list of names, empty list if no rows in db.
     table = columns('spells')
+    
 
     return apology("TODO")
 
