@@ -6,7 +6,7 @@ from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
-from helpers import apology, login_required, randompw
+from helpers import apology, login_required, randompw, columns
 
 # Configure application
 app = Flask(__name__)
@@ -269,6 +269,8 @@ def importExport():
 @login_required
 def spells():
     """Page to Create, import, and or export spells"""
+    table = columns('spells')
+    print(table)
     return apology("TODO")
 
 @app.route("/monsters", methods=["GET", "POST"])

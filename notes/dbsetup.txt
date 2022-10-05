@@ -230,20 +230,48 @@ sql tables
 
 
 Schema:
-
-CREATE TABLE sqlite_sequence(name,seq);
-CREATE TABLE IF NOT EXISTS 'users' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'name' TEXT NOT NULL, 'pwhash' TEXT NOT NULL, 'email'  TEXT NOT NULL  , 'access' INTEGER NOT NULL DEFAULT 0, 'challenges'  TEXT NOT NULL  );
-CREATE TABLE IF NOT EXISTS 'sources' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'user_id' INTEGER NOT NULL, 'abbr' TEXT NOT NULL, 'name' TEXT NOT NULL, 'publisher' TEXT NOT NULL, 'minAccess' INTEGER NOT NULL DEFAULT 0 );
-CREATE TABLE IF NOT EXISTS 'spells' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'name' TEXT NOT NULL, 'classes' TEXT NOT NULL, 'lvl' INTEGER NOT NULL, 'image' INTEGER, 'casting_time' TEXT NOT NULL DEFAULT '1 action', 'duration' TEXT NOT NULL, 'range' TEXT NOT NULL, 'area' TEXT, 'shape' TEXT, 'attack' TEXT, 'save' TEXT, 'dmg' TEXT, 'school' TEXT NOT NULL, 'src' INTEGER NOT NULL, 'components' TEXT NOT NULL, 'material_component' TEXT, 'ritual' BOOLEAN NOT NULL DEFAULT 0 , 'concentration' BOOLEAN NOT NULL DEFAULT 0 );
-CREATE TABLE IF NOT EXISTS 'feats' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'name' TEXT NOT NULL, 'src' INTEGER NOT NULL, 'effects' TEXT NOT NULL, 'prerequisite' TEXT NOT NULL, 'cr_adj' INTEGER NOT NULL DEFAULT 0 , 'tags' TEXT);
-CREATE TABLE IF NOT EXISTS 'races' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'name' TEXT NOT NULL, 'ability_scores' TEXT, 'size' TEXT NOT NULL DEFAULT 'medium', 'src' INTEGER NOT NULL, 'spd' TEXT NOT NULL, 'traits' TEXT NOT NULL, 'cr_adj' INTEGER NOT NULL DEFAULT 0 );
-CREATE TABLE IF NOT EXISTS 'backgrounds' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'description' TEXT NOT NULL, 'proficiencies' TEXT, 'languages' TEXT, 'features' TEXT NOT NULL, 'characteristics' TEXT NOT NULL, 'src' INTEGER NOT NULL, 'trait' TEXT NOT NULL, 'ideal' TEXT NOT NULL, 'bond' TEXT NOT NULL, 'flaw' TEXT NOT NULL);
-CREATE TABLE IF NOT EXISTS 'traits' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'name' TEXT NOT NULL, 'description' TEXT NOT NULL, 'trait' BOOLEAN NOT NULL, 'bond' BOOLEAN NOT NULL, 'ideal' BOOLEAN NOT NULL, 'flaw' BOOLEAN NOT NULL, 'src' INTEGER NOT NULL);
-CREATE TABLE IF NOT EXISTS 'languages' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'name' TEXT NOT NULL, 'description' TEXT, 'src' INTEGER NOT NULL, 'speakers' TEXT, 'script' TEXT);
-CREATE TABLE IF NOT EXISTS 'equipment' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'name' TEXT NOT NULL, 'type' TEXT NOT NULL, 'description' TEXT NOT NULL, 'weight' INTEGER NOT NULL, 'src' INTEGER NOT NULL);
-CREATE TABLE IF NOT EXISTS 'skill' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'name' TEXT NOT NULL, 'attribute' TEXT NOT NULL, 'description' TEXT NOT NULL, 'src' INTEGER NOT NULL);
-CREATE TABLE IF NOT EXISTS 'weapon' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'name' TEXT NOT NULL, 'description' TEXT NOT NULL, 'type' TEXT NOT NULL, 'weight' INTEGER NOT NULL, 'cost' TEXT NOT NULL, 'src' INTEGER NOT NULL, 'dmg_type' TEXT NOT NULL, 'dmg' TEXT NOT NULL, 'versatile' BOOLEAN NOT NULL, 'versatile_dmg' TEXT, 'range_short' INTEGER, 'range_long' INTEGER, 'reload' BOOLEAN NOT NULL DEFAULT 0 , 'heavy' BOOLEAN NOT NULL DEFAULT 0 , 'finesse' BOOLEAN NOT NULL DEFAULT 0 , '2handed' BOOLEAN NOT NULL DEFAULT 0 , 'ammunition' BOOLEAN NOT NULL DEFAULT 0 );
-CREATE TABLE IF NOT EXISTS 'armor' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'name' TEXT NOT NULL, 'description' TEXT NOT NULL, 'weight' INTEGER NOT NULL, 'cost' TEXT NOT NULL, 'weight_class' TEXT NOT NULL, 'cr_adj' INTEGER NOT NULL DEFAULT 0);
-CREATE TABLE IF NOT EXISTS 'features' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'name' TEXT NOT NULL, 'src' INTEGER NOT NULL, 'description' TEXT NOT NULL, 'cr_adj' INTEGER NOT NULL DEFAULT 0 );
-CREATE TABLE IF NOT EXISTS 'monsters' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'name' TEXT NOT NULL, 'description' TEXT NOT NULL, 'type' TEXT NOT NULL, 'subtype' TEXT NOT NULL, 'str' INTEGER NOT NULL, 'dex' INTEGER NOT NULL, 'con' INTEGER NOT NULL, 'int' INTEGER NOT NULL, 'wis' INTEGER NOT NULL, 'cha' INTEGER NOT NULL, 'hitdie' TEXT NOT NULL, 'hp' INTEGER NOT NULL, 'movement' TEXT NOT NULL, 'dmg_immunities' TEXT NOT NULL, 'condition_immunities' TEXT NOT NULL, 'senses' TEXT NOT NULL, 'languages' TEXT, 'cr' INTEGER NOT NULL, 'prof_bonus' TEXT NOT NULL, 'image' TEXT NOT NULL, 'action' TEXT NOT NULL, 'features' TEXT NOT NULL, 'src'  INTEGER NOT NULL  );
-CREATE TABLE IF NOT EXISTS 'conditions' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'name' TEXT NOT NULL, 'description' TEXT NOT NULL, 'src' INTEGER NOT NULL);
+'users' 
+    ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    'name' TEXT NOT NULL,
+    'pwhash' TEXT NOT NULL,
+    'email'  TEXT NOT NULL  ,
+    'access' INTEGER NOT NULL DEFAULT 0,
+    'challenges'  TEXT NOT NULL  );
+'sources' 
+    ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    'user_id' INTEGER NOT NULL,
+    'abbr' TEXT NOT NULL,
+    'name' TEXT NOT NULL,
+    'publisher' TEXT NOT NULL,
+    'minAccess' INTEGER NOT NULL DEFAULT 0 );
+'spells' 
+    ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+     'name' TEXT NOT NULL, 'classes' TEXT NOT NULL,
+     'lvl' INTEGER NOT NULL,
+     'image' TEXT,
+     'casting_time' TEXT NOT NULL DEFAULT '1 action',
+     'duration' TEXT NOT NULL,
+     'range' TEXT NOT NULL,
+     'area' TEXT,
+     'shape' TEXT,
+     'attack' TEXT,
+     'save' TEXT,
+     'dmg' TEXT,
+     'school' TEXT NOT NULL,
+     'src' INTEGER NOT NULL,
+     'components' TEXT NOT NULL,
+     'material_component' TEXT,
+     'ritual' BOOLEAN NOT NULL DEFAULT 0 ,
+     'concentration' BOOLEAN NOT NULL DEFAULT 0 );
+'feats' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'name' TEXT NOT NULL, 'src' INTEGER NOT NULL, 'effects' TEXT NOT NULL, 'prerequisite' TEXT NOT NULL, 'cr_adj' INTEGER NOT NULL DEFAULT 0 , 'tags' TEXT);
+'races' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'name' TEXT NOT NULL, 'ability_scores' TEXT, 'size' TEXT NOT NULL DEFAULT 'medium', 'src' INTEGER NOT NULL, 'spd' TEXT NOT NULL, 'traits' TEXT NOT NULL, 'cr_adj' INTEGER NOT NULL DEFAULT 0 );
+'backgrounds' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'description' TEXT NOT NULL, 'proficiencies' TEXT, 'languages' TEXT, 'features' TEXT NOT NULL, 'characteristics' TEXT NOT NULL, 'src' INTEGER NOT NULL, 'trait' TEXT NOT NULL, 'ideal' TEXT NOT NULL, 'bond' TEXT NOT NULL, 'flaw' TEXT NOT NULL);
+'traits' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'name' TEXT NOT NULL, 'description' TEXT NOT NULL, 'trait' BOOLEAN NOT NULL, 'bond' BOOLEAN NOT NULL, 'ideal' BOOLEAN NOT NULL, 'flaw' BOOLEAN NOT NULL, 'src' INTEGER NOT NULL);
+'languages' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'name' TEXT NOT NULL, 'description' TEXT, 'src' INTEGER NOT NULL, 'speakers' TEXT, 'script' TEXT);
+'equipment' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'name' TEXT NOT NULL, 'type' TEXT NOT NULL, 'description' TEXT NOT NULL, 'weight' INTEGER NOT NULL, 'src' INTEGER NOT NULL);
+'skill' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'name' TEXT NOT NULL, 'attribute' TEXT NOT NULL, 'description' TEXT NOT NULL, 'src' INTEGER NOT NULL);
+'weapon' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'name' TEXT NOT NULL, 'description' TEXT NOT NULL, 'type' TEXT NOT NULL, 'weight' INTEGER NOT NULL, 'cost' TEXT NOT NULL, 'src' INTEGER NOT NULL, 'dmg_type' TEXT NOT NULL, 'dmg' TEXT NOT NULL, 'versatile' BOOLEAN NOT NULL, 'versatile_dmg' TEXT, 'range_short' INTEGER, 'range_long' INTEGER, 'reload' BOOLEAN NOT NULL DEFAULT 0 , 'heavy' BOOLEAN NOT NULL DEFAULT 0 , 'finesse' BOOLEAN NOT NULL DEFAULT 0 , '2handed' BOOLEAN NOT NULL DEFAULT 0 , 'ammunition' BOOLEAN NOT NULL DEFAULT 0 );
+'armor' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'name' TEXT NOT NULL, 'description' TEXT NOT NULL, 'weight' INTEGER NOT NULL, 'cost' TEXT NOT NULL, 'weight_class' TEXT NOT NULL, 'cr_adj' INTEGER NOT NULL DEFAULT 0);
+'features' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'name' TEXT NOT NULL, 'src' INTEGER NOT NULL, 'description' TEXT NOT NULL, 'cr_adj' INTEGER NOT NULL DEFAULT 0 );
+'monsters' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'name' TEXT NOT NULL, 'description' TEXT NOT NULL, 'type' TEXT NOT NULL, 'subtype' TEXT NOT NULL, 'str' INTEGER NOT NULL, 'dex' INTEGER NOT NULL, 'con' INTEGER NOT NULL, 'int' INTEGER NOT NULL, 'wis' INTEGER NOT NULL, 'cha' INTEGER NOT NULL, 'hitdie' TEXT NOT NULL, 'hp' INTEGER NOT NULL, 'movement' TEXT NOT NULL, 'dmg_immunities' TEXT NOT NULL, 'condition_immunities' TEXT NOT NULL, 'senses' TEXT NOT NULL, 'languages' TEXT, 'cr' INTEGER NOT NULL, 'prof_bonus' TEXT NOT NULL, 'image' TEXT NOT NULL, 'action' TEXT NOT NULL, 'features' TEXT NOT NULL, 'src'  INTEGER NOT NULL  );
+'conditions' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, 'name' TEXT NOT NULL, 'description' TEXT NOT NULL, 'src' INTEGER NOT NULL);

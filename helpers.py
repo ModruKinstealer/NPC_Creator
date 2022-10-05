@@ -2,6 +2,7 @@
 import string
 import random
 
+from cs50 import SQL
 from flask import redirect, render_template, request, session
 from functools import wraps
 
@@ -40,3 +41,10 @@ def randompw():
     for i in range(8):
         pw += random.choice(pool)
     return pw
+
+def columns(table):
+    # Set CS50 to use npc.db
+    db = SQL("sqlite:///npc.db")
+    # Get Table schema
+    table = db.execute(".schema ?", table)
+    print(table)
