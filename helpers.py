@@ -7,7 +7,7 @@ from flask import redirect, render_template, request, session
 from functools import wraps
 
 
-# Stolen and modified from CS50 Finance distribution code
+# Stolen from CS50 Finance distribution code
 def apology(message, code=400):
     """Render message as an apology to user."""
     def escape(s):
@@ -22,7 +22,7 @@ def apology(message, code=400):
     return render_template("apology.html", top=code, bottom=escape(message)), code
 
 
-# Stolen and modified from CS50 Finance distribution code
+# Stolen from CS50 Finance distribution code
 def login_required(f):
     """
     Decorate routes to require login.
@@ -35,6 +35,7 @@ def login_required(f):
         return f(*args, **kwargs)
     return decorated_function
 
+# Simple function to generate a string of letters and numbers, length 8
 def randompw():
     pool = string.ascii_lowercase + string.digits
     pw = ''
@@ -42,9 +43,19 @@ def randompw():
         pw += random.choice(pool)
     return pw
 
+# Function to get the column names of a SQL table
 def columns(table):
     # Set CS50 to use npc.db
     db = SQL("sqlite:///npc.db")
-    # Get Table schema
-    table = db.execute(".schema ?", table)
-    print(table)
+    # Query DB's specified table
+    col = db.execute("SELECT * FROM ? LIMIT 1", table)
+    # If database is not empty
+    if len(col) == 1:
+        col = col[0].keys()
+        names = []
+        for i in col:
+            names.append(i)
+        return(names)
+    # If table was empty return an empty list
+    names = []
+    return(names)
