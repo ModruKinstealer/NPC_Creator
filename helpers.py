@@ -36,7 +36,7 @@ def login_required(f):
     return decorated_function
 
 # Simple function to generate a string of letters and numbers, length 8
-def randompw():
+def random_pw():
     pool = string.ascii_lowercase + string.digits
     pw = ''
     for i in range(8):
