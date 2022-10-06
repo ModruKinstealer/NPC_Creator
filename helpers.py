@@ -35,6 +35,7 @@ def login_required(f):
         return f(*args, **kwargs)
     return decorated_function
 
+
 # Simple function to generate a string of letters and numbers, length 8
 def random_pw():
     pool = string.ascii_lowercase + string.digits
@@ -43,7 +44,8 @@ def random_pw():
         pw += random.choice(pool)
     return pw
 
-# Function to get the column names of a SQL table
+
+# Function to get the column names of a SQL table, accepts table name, returns list of column names
 def columns(table):
     # Set CS50 to use npc.db
     db = SQL("sqlite:///npc.db")
@@ -59,3 +61,15 @@ def columns(table):
     # If table was empty return an empty list
     names = []
     return(names)
+
+
+# Function to get the access level of a user, accepts user id (id from users table), returns minAccess from users table (Integer)
+def user_access(user, db):
+    access = db.execute("SELECT access FROM users WHERE id=?", user)
+    return(access[0]['access'])
+
+
+# Function to get the sources the user has access to, accepts user id (id from users table), returns list of dictionaries  {src id: src abbr}
+def sources(user,db):
+    sources = db.execute("SELECT id, abbr FROM sources WHERE minAccess <= ?", user_access(user, db))
+    return(sources)
