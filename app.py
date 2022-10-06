@@ -6,7 +6,7 @@ from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
-from helpers import apology, login_required, randompw, columns
+from helpers import apology, login_required, random_pw, columns
 
 # Configure application
 app = Flask(__name__)
@@ -237,7 +237,7 @@ def resetpwchallenge():
             return apology("Sorry the answer was incorrect.")
         else:
             # Challenge answered correctly so set pw to random pw and send user to password change screen
-            pw = randompw()
+            pw = random_pw()
 
             # Hash random pw
             hash = generate_password_hash(pw, method='sha256', salt_length=16)
@@ -271,9 +271,19 @@ def spells():
     """Page to Create, import, and or export spells"""
     # Get a list of column names for SQL table, input table name, get back a list of names, empty list if no rows in db.
     table = columns('spells')
-    
+    spells = []
 
-    return apology("TODO")
+    # Get logged in users access level
+    userAccess = db.execute("SELECT access FROM users WHERE id=?", session["user_id"])
+    sources = db.execute("SELECT id, abbr FROM sources WHERE minAccess => ?", userAccess)
+
+    # Post Add or Remove spells, possibly sorting/filtering if not able to do so through other means dynamically
+    if request.method == "POST":
+        todo
+
+    # Get spell with src = userid + spells where access is higher than min access
+
+    return render_template("spells.html", table=table, spells=spells)
 
 @app.route("/monsters", methods=["GET", "POST"])
 @login_required
