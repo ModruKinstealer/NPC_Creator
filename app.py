@@ -269,22 +269,28 @@ def importExport():
 @login_required
 def spells():
     """Page to Create, import, and or export spells"""
-    # Get a list of column names for SQL table, input table name, get back a list of names, empty list if no rows in db.
-    table = columns('spells')
-    spells = []
-    print(sources(session["user_id"], db))
+    # Get a list of column names for SQL table, input table name and db connection, get back a list of names, empty list if no rows in db.
+    table_cols = columns('spells', db)
+    spell_sources = sources(session["user_id"], db)
 
-    # Get logged in users access level
-    userAccess = db.execute("SELECT access FROM users WHERE id=?", session["user_id"])
-    sources = db.execute("SELECT id, abbr FROM sources WHERE minAccess => ?", userAccess)
-
-    # Post Add or Remove spells, possibly sorting/filtering if not able to do so through other means dynamically
+    # Post Method: Add or Remove spells, possibly sorting/filtering if not able to do so through other means dynamically
     if request.method == "POST":
         todo
 
+    # Get Mothod:
+
+    spells = []
+    for spell in spell_sources.values:
+        
+    print(sources(session["user_id"], db))
+
+
+
+
+
     # Get spell with src = userid + spells where access is higher than min access
 
-    return render_template("spells.html", table=table, spells=spells)
+    return render_template("spells.html", table_cols=table_cols, spells=spells)
 
 @app.route("/monsters", methods=["GET", "POST"])
 @login_required
