@@ -46,9 +46,7 @@ def random_pw():
 
 
 # Function to get the column names of a SQL table, accepts table name, returns list of column names
-def columns(table):
-    # Set CS50 to use npc.db
-    db = SQL("sqlite:///npc.db")
+def columns(table, db):
     # Query DB's specified table
     col = db.execute("SELECT * FROM ? LIMIT 1", table)
     # If database is not empty
