@@ -63,13 +63,15 @@ def columns(table):
     return(names)
 
 
-# Function to get the access level of a user, accepts user id (id from users table), returns minAccess from users table (Integer)
+# Function to get the access level of a user, accepts user id (id from users table)  and a database connection object, returns minAccess from users table (Integer)
 def user_access(user, db):
     access = db.execute("SELECT access FROM users WHERE id=?", user)
     return(access[0]['access'])
 
 
-# Function to get the sources the user has access to, accepts user id (id from users table), returns list of dictionaries  {src id: src abbr}
-def sources(user,db):
-    sources = db.execute("SELECT id, abbr FROM sources WHERE minAccess <= ?", user_access(user, db))
+# Function to get the sources the user has access to, accepts user id (id from users table) and a database connection object, returns list of dictionaries  {src id: src abbr}
+def sources(user, db):
+    # Get sources id and abbr fields filtered by the user's access level of lower
+    sources = db.execute("SELECT id, abbr FROM sources WHERE minAccess <= ? OR user_id=?", user_access(user, db), user)
+    # TODO: ability for users to grant access to their homebrewed content, in this context it'd be if they grant access to all of their content
     return(sources)
