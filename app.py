@@ -277,16 +277,14 @@ def spells():
     if request.method == "POST":
         todo
 
-    # Get Mothod:
+    # Get Method:
 
     spells = []
-    for spell in spell_sources.values:
-        
+    for spell in spell_sources["id"]:
+        spells.append(db.execute("SELECT * FROM spells WHERE src=? GROUP BY lvl ORDER by name", spell)
+    
+    print(spells)
     print(sources(session["user_id"], db))
-
-
-
-
 
     # Get spell with src = userid + spells where access is higher than min access
 
