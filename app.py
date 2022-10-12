@@ -280,8 +280,8 @@ def spells():
     # Get Method:
 
     spells = []
-    for spell in spell_sources["id"]:
-        spells.append(db.execute("SELECT * FROM spells WHERE src=? GROUP BY lvl ORDER by name", spell)
+    #for spell in spell_sources["id"]:
+     #   spells.append(db.execute("SELECT * FROM spells WHERE src=? GROUP BY lvl ORDER by name", spell))
     
     print(spells)
     print(sources(session["user_id"], db))
