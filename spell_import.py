@@ -13,11 +13,29 @@ def spells_import(file, user, db):
     spells = []
     # Iterate through data and build a new dict with just the info needed for our db
     for spell in data:
-        # Empty dict to populate for each iteration
-        spell_dict = {}
-        spell_dict["name"] = spell["name"]
-        spell_dict["image"] = spell["img"]
+        if spell["type"] == "spell":
+            # Empty dict to populate for each iteration
+            print(spell["name"])
+            print(spell["img"])
+            print(spell["data"]["description"]["value"])
+            print(spell["data"]["source"])
+            print(spell["data"]["level"])
+            print(spell["data"]["school"])
+            print(spell["data"]["components"]["vocal"])
+            print(spell["data"]["components"]["somatic"])
+            print(spell["data"]["components"]["material"])
+            print(spell["data"]["components"]["ritual"])
+            print(spell["data"]["components"]["concentration"])
 
+            # TODO: logging? try except where if it doesn't work add name and type to a list to print out at end.
+            # TODO: if spell["type"] == feat, don't process, or probably better only process if type is spell
+            # TODO: Field split into dict with multiple keys, verify from Export of individual item before finalizing
+            '''
+            print(spell["data"]["materials"]["value"])
+            print(spell["data"]["activation"]["type"])
+            print(spell["data"]["duration"]["value"])
+            print(spell["data"]["target"]["value"])
+            '''
 
 
     # return(spells)

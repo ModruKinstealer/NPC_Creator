@@ -186,3 +186,169 @@
 		}
 	}
     }'
+
+
+	{
+		"_id": "zzyUlQHV57yLpSg1",
+		"name": "Counterspell",
+		"type": "spell",
+		"img": "modules/plutonium/media/icon/spell/phb-counterspell.jpg",
+		"data": {
+			"description": {
+				"value": "<div class=\"rd__b  rd__b--3\"><p>You attempt to interrupt a creature in the process of casting a spell. If the creature is casting a spell of 3rd level or lower, its spell fails and has no effect. If it is casting a spell of 4th level or higher, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a success, the creature's spell fails and has no effect.</p><div class=\"rd__spc-inline-post\"></div></div><div class=\"rd__b  rd__b--3\"><div class=\"rd__b  rd__b--3\"><span class=\"rd__h rd__h--3\" data-title-index=\"5110\"> <span class=\"entry-title-inner\">At Higher Levels.</span></span> <p>When you cast this spell using a spell slot of 4th level or higher, the interrupted spell has no effect if its level is less than or equal to the level of the spell slot you used.</p><div class=\"rd__spc-inline-post\"></div></div><div class=\"rd__spc-inline-post\"></div></div>",
+				"chat": "",
+				"unidentified": ""
+			},
+			"source": "PHB",
+			"activation": {
+				"type": "reaction",
+				"cost": 1,
+				"condition": "which you take when you see a creature within 60 feet of you casting a spell"
+			},
+			"duration": {
+				"value": null,
+				"units": "inst"
+			},
+			"target": {
+				"value": 1,
+				"width": null,
+				"units": "",
+				"type": "creature"
+			},
+			"range": {
+				"value": 60,
+				"long": 0,
+				"units": "ft"
+			},
+			"uses": {
+				"value": 0,
+				"max": 0,
+				"per": ""
+			},
+			"consume": {
+				"type": "",
+				"target": null,
+				"amount": null
+			},
+			"ability": "",
+			"actionType": "util",
+			"attackBonus": 0,
+			"chatFlavor": "",
+			"critical": null,
+			"damage": {
+				"parts": [],
+				"versatile": ""
+			},
+			"formula": "",
+			"save": {
+				"ability": "",
+				"dc": null,
+				"scaling": "spell"
+			},
+			"level": 3,
+			"school": "abj",
+			"components": {
+				"value": "",
+				"vocal": false,
+				"somatic": true,
+				"material": false,
+				"ritual": false,
+				"concentration": false
+			},
+			"materials": {
+				"value": "",
+				"consumed": false,
+				"cost": 0,
+				"supply": 0
+			},
+			"preparation": {
+				"mode": "prepared",
+				"prepared": false
+			},
+			"scaling": {
+				"mode": "none",
+				"formula": ""
+			}
+		},
+		"effects": [],
+		"folder": null,
+		"sort": 0,
+		"permission": {
+			"default": 0,
+			"0CZ9ccWieJTQlNFS": 3
+		},
+		"flags": {
+			"vtta": {
+				"dndbeyond": {
+					"lookup": "classSpell",
+					"class": "Wizard",
+					"level": 20,
+					"spellLevel": 3,
+					"spellSlots": {
+						"spell0": {
+							"value": null
+						},
+						"spell1": {
+							"value": 4,
+							"max": 4
+						},
+						"spell2": {
+							"value": 3,
+							"max": 3
+						},
+						"spell3": {
+							"value": 3,
+							"max": 3
+						},
+						"spell4": {
+							"value": 3,
+							"max": 3
+						},
+						"spell5": {
+							"value": 3,
+							"max": 3
+						},
+						"spell6": {
+							"value": 2,
+							"max": 2
+						},
+						"spell7": {
+							"value": 2,
+							"max": 2
+						},
+						"spell8": {
+							"value": 1,
+							"max": 1
+						},
+						"spell9": {
+							"value": 1,
+							"max": 1
+						}
+					},
+					"ability": "int",
+					"mod": 5,
+					"dc": 19,
+					"cantripBoost": false,
+					"overrideDC": false,
+					"tags": ["Negation"]
+				}
+			},
+			"betterRolls5e": {
+				"quickVersatile": {
+					"altValue": true
+				}
+			},
+			"core": {
+				"sourceId": "Compendium.forge-vtt-shared-compendiums-forgelmopsharedcompendium.spells.kyjnCQYq6eldIEOW"
+			},
+			"scene-packer": {
+				"hash": "e0065ad284f82cf838f079b7c04962d4bf2fdcfc",
+				"sourceId": "Item.zzyUlQHV57yLpSg1"
+			},
+			"cf": {
+				"id": null,
+				"path": "Spells (Shared)",
+				"color": "#000000"
+			}
+		}
+	}
