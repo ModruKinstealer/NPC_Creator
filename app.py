@@ -233,7 +233,7 @@ def resetpwchallenge():
         # Since I filled in this page's username and email from my POST from resetpw if either of these fields are blank shenanigans may have happened.
         if not request.form.get("username") or not request.form.get("email"):
             return apology("To Reset the pw we need either the user name or the email address.")
-        # Making sure that the user name and email submitted match what I think they should, again in case of shenanigans
+        # Making sure that the user name and email submitted match what I think they should, in case of shenanigans
         elif request.form.get("username") != name or request.form.get("email") != email:
             return apology("Username and emails don't match our records.")
         # **more stuff goes here**

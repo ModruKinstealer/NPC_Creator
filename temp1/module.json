@@ -1,0 +1,116 @@
+{
+  "id": "forge-vtt-shared-compendiums-test",
+  "name": "forge-vtt-shared-compendiums-test",
+  "title": "test (Shared Compendiums)",
+  "description": "<p>test</p>\n <br/><div style=\"border: 1px solid #eee;border-left-width: .25rem;border-left-color: #f0ad4e;border-radius: .25rem;padding: 10px;\">\n        <h5 style=\"margin:0px;\">Shared Compendium</h5>\n        <p style=\"margin-bottom:0px;\">This module allows you to share compendiums between your worlds.</p>\n        <p style=\"margin-bottom:0px;\">It cannot be auto-updated, therefore it cannot overwrite your compendiums and is therefore <strong>safe to unlock</strong>.</p></div>",
+  "version": "1.0",
+  "minimumCoreVersion": "0.6.0",
+  "compatibleCoreVersion": "10",
+  "compatibility": {
+    "minimum": "0.6.0",
+    "verified": "10"
+  },
+  "author": "The Forge",
+  "authors": [
+    {
+      "name": "The Forge"
+    }
+  ],
+  "packs": [
+    {
+      "name": "actor-1-actors",
+      "label": "Actors (Shared)",
+      "path": "packs/actor-1-actors.db",
+      "entity": "Actor",
+      "type": "Actor",
+      "package": "forge-vtt-shared-compendiums-test"
+    },
+    {
+      "name": "actor-2-monsters",
+      "label": "Monsters (Shared)",
+      "path": "packs/actor-2-monsters.db",
+      "entity": "Actor",
+      "type": "Actor",
+      "package": "forge-vtt-shared-compendiums-test"
+    },
+    {
+      "name": "item-1-spells",
+      "label": "Spells (Shared)",
+      "path": "packs/item-1-spells.db",
+      "entity": "Item",
+      "type": "Item",
+      "package": "forge-vtt-shared-compendiums-test"
+    },
+    {
+      "name": "item-2-items",
+      "label": "Items (Shared)",
+      "path": "packs/item-2-items.db",
+      "entity": "Item",
+      "type": "Item",
+      "package": "forge-vtt-shared-compendiums-test"
+    },
+    {
+      "name": "cards-1-cards",
+      "label": "Cards (Shared)",
+      "path": "packs/cards-1-cards.db",
+      "entity": "Cards",
+      "type": "Cards",
+      "package": "forge-vtt-shared-compendiums-test"
+    },
+    {
+      "name": "item-3-class-features",
+      "label": "Class Features (Shared)",
+      "path": "packs/item-3-class-features.db",
+      "entity": "Item",
+      "type": "Item",
+      "package": "forge-vtt-shared-compendiums-test"
+    },
+    {
+      "name": "item-4-monster-features",
+      "label": "Monster Features (Shared)",
+      "path": "packs/item-4-monster-features.db",
+      "entity": "Item",
+      "type": "Item",
+      "package": "forge-vtt-shared-compendiums-test"
+    },
+    {
+      "name": "journalentry-1-journal-entries",
+      "label": "Journal Entries (Shared)",
+      "path": "packs/journalentry-1-journal-entries.db",
+      "entity": "JournalEntry",
+      "type": "JournalEntry",
+      "package": "forge-vtt-shared-compendiums-test"
+    },
+    {
+      "name": "scene-1-scenes",
+      "label": "Scenes (Shared)",
+      "path": "packs/scene-1-scenes.db",
+      "entity": "Scene",
+      "type": "Scene",
+      "package": "forge-vtt-shared-compendiums-test"
+    },
+    {
+      "name": "macro-1-macros",
+      "label": "Macros (Shared)",
+      "path": "packs/macro-1-macros.db",
+      "entity": "Macro",
+      "type": "Macro",
+      "package": "forge-vtt-shared-compendiums-test"
+    },
+    {
+      "name": "rolltable-1-roll-tables",
+      "label": "Roll Tables (Shared)",
+      "path": "packs/rolltable-1-roll-tables.db",
+      "entity": "RollTable",
+      "type": "RollTable",
+      "package": "forge-vtt-shared-compendiums-test"
+    }
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e"
+      }
+    ]
+  }
+}

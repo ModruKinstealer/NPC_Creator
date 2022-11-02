@@ -84,5 +84,12 @@
       "entity": "Playlist",
       "package": "forge-vtt-shared-compendiums-global"
     }
-  ]
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e"
+      }
+    ]
+  }
 }
