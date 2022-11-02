@@ -5,12 +5,12 @@
 {% endblock %}
 
 {% block main %}
-    <h2>Account found. Choose a challenge from the drop down and enter in the answer for it.</h2>
+    <h2>Account found. Choose a challenge from the drop down and enter its answer.</h2>
     <form action="/resetpwchallenge" method="post">
         <!-- To DO -->
         <!-- List username and email of the account found from resetpw info -->
-        <input disabled id="username" name="username" type="text" value="{{ name }}">
-        <input disabled id="email" name="email" type="text" value="{{ email }}">
+        <input readonly id="username" name="username" type="text" value="{{ name }}">
+        <input readonly id="email" name="email" type="text" value="{{ email }}">
         <!-- Drop down with the 3 challenges chosen at registration. Then a field to enter answer and submit button -->
         <select autofocus name="challenge" class="mb-3">
             <option disabled selected></option>

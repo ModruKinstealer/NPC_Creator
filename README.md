@@ -23,6 +23,9 @@ As a new DM I found that often pre-made monsters or NPCs in my D&amp;D 5e game w
 - If possible, the ability to drag and drop a token file to directly input creature stats.  For Foundry this will be possibly to drag from compendiums. Importing from json files is also available, converting from files exported from other VTTs therefor should just be reliant upon being able to get them into a json format. 
 - The ability for each user to set what they want for default stats, or stat generation, for new creatures. 
 - The ability for a DM to determine which abilities the creature uses for calculation of CR, for those instances when they know that they want to use a different set of abilities than what is defaulted to for an encounter so they can tailor the CR more effectively to a particular encounter should they choose. 
+- Admin page to modify access level
+    Users
+    sources default access level
 
 # Files and their purposes
 -app.py, requirements.txt, helpers.py
@@ -31,8 +34,7 @@ As a new DM I found that often pre-made monsters or NPCs in my D&amp;D 5e game w
     - Main database for the site. Will have tables for users, spells, features, monsters, races, equipment, backgrounds, skills, and languages at a minimum.
     - I may create additional tables that are for home brewed content for each of those as well, it'll depend on what I think would be easier to maintain and use going forward
     - I considered using Json files rather than a DB but I'd guess there's at least a thousand spells, and a couple thousand monsters, plus everything else I thought that a SQL db would be the better long term choice since there's no telling how many users will use it and therefor how many thousands of new entries will get created going forward
-
-
-
-
-
+-helpers.py
+    - Houses the helper functions created to make repetitive tasks easier. Login_required(f) and apology() were stolen from pset9 Finance distributed code. The rest were defined by me. In the future I  may take advantage of a library for managing passwords, password resets, two factor authentication etc. But they are a little more robust than I need for this site since there isn't any financial data or any data similar.  Two factor authentication is overkill for the site as intended in my opinion but I may put the option in later for those who wish it. Eventually I'll probably add a user settings page which will have the option to have the temp password emailed to the email address linked to the account, I'll probably throw 2 factor auth in that feature as well while I'm in there.
+    - Holy cow why is it so difficult to get the column names of a table? You'd think you could just do some kind of SELECT query that gives you the same as .schema table_name. Nope. I found a couple options. PRAGMA table_info(table_name); Just returned "true" for me. I also tried "select * from sqlite_master" and it returned a list oc column names but included one called 'sqlite_sequence' that is not an actual column on the table. So rather than trying to figure out the best way to filter that out I went with what seemed like the simpler solution of just SELECT against the table and used a dict.keys() to pull out the column names. I should mention the reason behind all this was I wanted to dynamically pull the column names to create a HTML table using Jinja templates. Table columns shouldn't change that often, if ever, but I felt it was a good future proofing in case I do want to add columns to a table I don't have to go through and change a bunch of code, or that's the hope anyways.
+    - sources() and user_access() created to handle frequent calls for updating information on pages. Minaccess and sources are going to be used to control who can see what. Eventually maybe even having something like, validate someone has a d&d beyond account and what they own, then give them access to the appropriate sources. To start out with it's going to be SRD content then people can create homebrewed content as well. All homebrewed stuff will be tracked with a user as a source so they can decide if their stuf is public or private and hopefully i'll be able to let them decide particular users can access their stuff.
